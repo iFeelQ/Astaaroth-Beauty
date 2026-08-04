@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Polityka prywatności — Astaaroth Beauty</title>
+<meta name="description" content="Jakie dane zbiera strona salonu Astaaroth Beauty w Tymbarku, po co i jakie masz prawa.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="[UZUPEŁNIĆ — adres strony]/dokumenty/polityka-prywatnosci.html">
+<link rel="icon" href="../img/logo.webp">
+
+<!-- Te same lokalne kroje co na stronie głównej. Żadnego żądania na zewnątrz. -->
+<link rel="preload" as="font" type="font/woff2" href="../fonts/bodoni-moda-400-normal-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../fonts/inter-400-normal-latin.woff2" crossorigin>
+
+<style>
+@font-face{font-family:'Bodoni Moda';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/bodoni-moda-400-normal-latin.woff2) format('woff2');unicode-range:U+0020-007E,U+00A0-00AC,U+00AE-00FF,U+2013-2014,U+2018-201A,U+201C-201E,U+2022,U+2026,U+20AC,U+2122}
+@font-face{font-family:'Bodoni Moda';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/bodoni-moda-400-normal-latin-ext.woff2) format('woff2');unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/inter-400-normal-latin.woff2) format('woff2');unicode-range:U+0020-007E,U+00A0-00AC,U+00AE-00FF,U+2013-2014,U+2018-201A,U+201C-201E,U+2022,U+2026,U+20AC,U+2122}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/inter-400-normal-latin-ext.woff2) format('woff2');unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/inter-500-normal-latin.woff2) format('woff2');unicode-range:U+0020-007E,U+00A0-00AC,U+00AE-00FF,U+2013-2014,U+2018-201A,U+201C-201E,U+2022,U+2026,U+20AC,U+2122}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/inter-500-normal-latin-ext.woff2) format('woff2');unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+
+/* Paleta i skala odstępów przepisane ze strony głównej. Jeden dokument prawny
+   nie jest wart wydzielania wspólnego arkusza — ale jeśli zmienisz kolory
+   w index.html, zmień je też tutaj. */
+:root{
+  --tlo:#F8E7E9;
+  --tlo-alt:#FFFAFB;
+  --tekst:#2B1119;
+  --tekst-slaby:#7A5A60;
+  --akcent:#A32A4C;
+  --obramowanie:#E4CBD1;
+  --font-display:"Bodoni Moda",Didot,Georgia,serif;
+  --font-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --s-1:.5rem; --s-2:1rem; --s-3:1.75rem; --s-4:3rem; --s-5:5rem;
+  --promien-m:18px; --linia:1px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--tlo);color:var(--tekst);
+  font-family:var(--font-body);font-size:1rem;line-height:1.65;
+}
+.kontener{max-width:44rem;margin-inline:auto;padding-inline:var(--s-2)}
+a{color:var(--akcent)}
+a:focus-visible,summary:focus-visible{
+  outline:2px solid var(--akcent);outline-offset:3px;border-radius:4px;
+}
+
+.gora{border-bottom:var(--linia) solid var(--obramowanie);background:var(--tlo)}
+.gora__rzad{display:flex;align-items:center;justify-content:space-between;gap:var(--s-2);min-height:3.5rem}
+.gora img{display:block;height:2.6rem;width:auto}
+.gora a{text-decoration:none;font-weight:500;font-size:.9rem}
+
+main{padding-block:var(--s-4) var(--s-5)}
+h1{
+  font-family:var(--font-display);font-weight:400;
+  font-size:clamp(2rem,7vw,3.2rem);line-height:1.05;letter-spacing:-.01em;
+  margin:0 0 var(--s-2);
+}
+.data{color:var(--tekst-slaby);font-size:.9rem;margin:0 0 var(--s-4)}
+h2{
+  font-family:var(--font-display);font-weight:400;
+  font-size:clamp(1.3rem,4.5vw,1.9rem);line-height:1.15;
+  margin:var(--s-4) 0 var(--s-1);
+}
+p,ul{margin:0 0 var(--s-2)}
+ul{padding-left:1.2em}
+li{margin-bottom:var(--s-1)}
+
+.karta{
+  background:var(--tlo-alt);border:var(--linia) solid var(--obramowanie);
+  border-radius:var(--promien-m);padding:var(--s-3);margin-bottom:var(--s-3);
+}
+.karta > :last-child{margin-bottom:0}
+
+/* Miejsca do uzupełnienia mają być widoczne, a nie schowane w kodzie. */
+.brak{
+  background:#FBD7DE;color:#7A1130;border-radius:4px;
+  padding:.05em .4em;font-size:.9em;font-weight:500;
+}
+
+.dol{
+  border-top:var(--linia) solid var(--obramowanie);
+  padding-block:var(--s-3);color:var(--tekst-slaby);font-size:.85rem;
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+}
+</style>
+</head>
+<body>
+
+<header class="gora">
+  <div class="kontener gora__rzad">
+    <a href="../index.html"><img src="../img/logo.webp" width="569" height="246" alt="Astaaroth Beauty"></a>
+    <a href="../index.html">← Wróć na stronę</a>
+  </div>
+</header>
+
+<main class="kontener">
+  <h1>Polityka prywatności</h1>
+  <p class="data">Obowiązuje od <span class="brak">[UZUPEŁNIĆ — data publikacji]</span></p>
+
+  <div class="karta">
+    <p><strong>Krótko:</strong> ta strona nie zbiera o Tobie żadnych danych sama z siebie.
+    Nie ma formularzy, nie ma konta, nie ma analityki, nie ma reklam. Nie stawia
+    też własnych plików cookie. Dane pojawiają się dopiero wtedy, gdy sam(a) się
+    do nas odezwiesz albo klikniesz przycisk pokazujący mapę.</p>
+  </div>
+
+  <h2>Kto odpowiada za Twoje dane</h2>
+  <p>Administratorem danych osobowych jest
+    <span class="brak">[UZUPEŁNIĆ — pełna nazwa firmy z CEIDG]</span>,
+    <span class="brak">[UZUPEŁNIĆ — adres siedziby, jeśli inny niż salonu]</span>,
+    NIP <span class="brak">[UZUPEŁNIĆ — NIP]</span>, prowadząca salon Astaaroth Beauty
+    przy ul. Armii Krajowej 55 w Tymbarku (34-650).</p>
+  <p>Kontakt w sprawach danych: telefon 883 027 207 lub e-mail
+    <span class="brak">[UZUPEŁNIĆ — e-mail]</span>.</p>
+
+  <h2>Logi serwera</h2>
+  <p>Firma, która utrzymuje tę stronę
+    (<span class="brak">[UZUPEŁNIĆ — nazwa firmy hostingowej]</span>),
+    zapisuje standardowe logi dostępowe: adres IP, datę i godzinę zapytania,
+    adres odwiedzonej podstrony, rodzaj przeglądarki. Służą one wyłącznie
+    utrzymaniu serwera i wykrywaniu nadużyć — to nasz prawnie uzasadniony
+    interes (art. 6 ust. 1 lit. f RODO). Nie łączymy tych zapisów z Twoją
+    osobą i nie używamy ich do profilowania.</p>
+  <p>Logi są przechowywane przez
+    <span class="brak">[UZUPEŁNIĆ — okres przechowywania logów u hostingodawcy]</span>.</p>
+
+  <h2>Pliki cookie</h2>
+  <p>Strona nie zapisuje na Twoim urządzeniu żadnych własnych plików cookie
+    i nie korzysta z narzędzi analitycznych ani reklamowych.</p>
+  <p>Kroje pisma (Bodoni Moda i Inter) są udostępniane z naszego serwera, a nie
+    z serwerów Google. Dzięki temu otwarcie strony nie przekazuje Twojego
+    adresu IP żadnej firmie zewnętrznej.</p>
+
+  <h2>Mapa dojazdu</h2>
+  <p>W sekcji „Kontakt" jest przycisk „Pokaż mapę". Do momentu jego kliknięcia
+    nie łączymy się z Google w żaden sposób. Dopiero po kliknięciu wczytuje się
+    mapa Google, a Google może wtedy zapisać na Twoim urządzeniu pliki cookie
+    i poznać Twój adres IP — na zasadach opisanych w
+    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">polityce prywatności Google</a>.
+    Kliknięcie tego przycisku jest Twoją zgodą na to połączenie. Jeśli jej nie
+    udzielisz, mapa się nie wczyta, a strona działa normalnie.</p>
+  <p>Adres salonu jest podany tekstem, więc dojazd wyznaczysz też w dowolnej
+    innej aplikacji, bez wczytywania mapy tutaj.</p>
+
+  <h2>Kontakt z nami</h2>
+  <p>Możesz się z nami skontaktować telefonicznie albo napisać przez Instagram
+    lub Facebook. W każdym z tych przypadków przetwarzamy dane, które sam(a)
+    nam podasz — imię, numer telefonu lub nazwę profilu, treść wiadomości —
+    po to, żeby umówić i przeprowadzić wizytę (art. 6 ust. 1 lit. b RODO).</p>
+  <p>Rozmowa przez Instagram lub Facebook odbywa się na serwerach Meta Platforms
+    Ireland Ltd., które jest wobec tych wiadomości odrębnym administratorem.
+    Nie mamy wpływu na to, jak Meta przetwarza dane — reguluje to
+    <a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener">polityka prywatności Meta</a>.
+    Jeśli wolisz tego uniknąć, zadzwoń.</p>
+  <p>Dane kontaktowe związane z wizytą przechowujemy przez
+    <span class="brak">[UZUPEŁNIĆ — jak długo trzymane są kontakty do klientek]</span>.</p>
+
+  <h2>Zdjęcia na stronie</h2>
+  <p>Zdjęcia efektów zabiegów publikujemy wyłącznie za zgodą osób, które są na
+    nich widoczne. Jeśli rozpoznajesz siebie na którymś zdjęciu i chcesz, żeby
+    zniknęło — napisz albo zadzwoń. Usuniemy je bez pytania o powód i bez
+    zbędnej zwłoki.</p>
+
+  <h2>Twoje prawa</h2>
+  <p>W zakresie danych, które nam przekazałeś lub przekazałaś, masz prawo do:</p>
+  <ul>
+    <li>dostępu do swoich danych i otrzymania ich kopii,</li>
+    <li>sprostowania danych nieprawidłowych,</li>
+    <li>usunięcia danych,</li>
+    <li>ograniczenia przetwarzania,</li>
+    <li>wniesienia sprzeciwu wobec przetwarzania opartego na prawnie
+      uzasadnionym interesie,</li>
+    <li>przeniesienia danych do innego administratora,</li>
+    <li>cofnięcia zgody w każdej chwili — bez wpływu na to, co działo się przed
+      cofnięciem.</li>
+  </ul>
+  <p>Żeby skorzystać z któregokolwiek z nich, wystarczy zadzwonić albo napisać.
+    Masz też prawo złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych
+    (ul. Stawki 2, 00-193 Warszawa).</p>
+
+  <h2>Komu przekazujemy dane</h2>
+  <p>Nie sprzedajemy ani nie udostępniamy danych w celach marketingowych. Dostęp
+    do nich mogą mieć wyłącznie podmioty, które obsługują nas technicznie —
+    firma hostingowa oraz, w zakresie wiadomości, operatorzy serwisów
+    społecznościowych i operator telefonii. Nie przekazujemy danych poza
+    Europejski Obszar Gospodarczy z własnej inicjatywy.</p>
+
+  <h2>Zmiany</h2>
+  <p>Jeśli na stronie pojawi się coś nowego — formularz, system rezerwacji,
+    narzędzie analityczne — ten dokument zostanie zaktualizowany, a data
+    na górze zmieniona.</p>
+</main>
+
+<footer class="dol">
+  <div class="kontener">
+    <p>Astaaroth Beauty · Armii Krajowej 55, 34-650 Tymbark ·
+      <a href="tel:+48883027207">883 027 207</a> ·
+      <a href="../index.html">Strona główna</a></p>
+  </div>
+</footer>
+
+<!--
+  UWAGA DLA WŁAŚCICIELKI: to jest rzetelny szkic opisujący dokładnie to, co ta
+  strona robi technicznie — i tylko tyle. Nie jest to porada prawna. Zanim
+  strona pójdzie w świat, uzupełnij zaznaczone miejsca i daj dokument do
+  przeczytania komuś, kto zna RODO. Szczególnie sprawdź: okresy przechowywania
+  danych, zgody na wizerunek klientek oraz to, czy salon nie przetwarza danych
+  o zdrowiu (przeciwwskazania do zabiegów) — bo to osobna kategoria danych
+  i wymaga osobnej podstawy prawnej.
+-->
+</body>
+</html>
