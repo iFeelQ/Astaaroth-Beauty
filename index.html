@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Kosmetyczka Tymbark – Astaaroth Beauty</title>
+<meta name="description" content="Salon kosmetyczny w Tymbarku. Makijaż ślubny i wieczorowy, stylizacja brwi i rzęs, szkolenia makijażowe. Zadzwoń i umów wizytę: 883 027 207.">
+
+<link rel="canonical" href="[UZUPEŁNIĆ — adres strony]">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kosmetyczka Tymbark – Astaaroth Beauty">
+<meta property="og:description" content="Salon kosmetyczny w Tymbarku. Makijaż ślubny i wieczorowy, stylizacja brwi i rzęs, szkolenia makijażowe.">
+<meta property="og:url" content="[UZUPEŁNIĆ — adres strony]">
+<!-- Adres musi być pełny, z domeną — Facebook i WhatsApp pobierają ten obrazek
+     ze swoich serwerów i ścieżki względnej nie rozwiążą. Podmień tylko człon
+     w nawiasie, reszta jest już poprawna. Plik: logo na białym panelu,
+     bo w samym logu jest biały rozbłysk, który na różu tworzy obwódkę. -->
+<meta property="og:image" content="[UZUPEŁNIĆ — adres strony]/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="Znak firmowy salonu Astaaroth Beauty">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%232B1119'/%3E%3Crect x='6' y='14.5' width='20' height='3' fill='%23A32A4C'/%3E%3C/svg%3E">
+
+<!-- Zdjęcie hero wstawia JavaScript, więc przeglądarka odkryłaby je dopiero
+     po wykonaniu skryptu. Preload startuje pobieranie od razu. Ścieżka musi
+     być identyczna z DANE.kadry.hero.plik — inaczej pobierze się dwa razy. -->
+<link rel="preload" as="image" href="img/hero-waski.webp" fetchpriority="high" media="(max-width:767px)">
+<link rel="preload" as="image" href="img/hero.webp" fetchpriority="high" media="(min-width:768px)">
+<!-- Kroje leżą na tym samym serwerze co strona. Pobieranie ich z fonts.gstatic.com
+     przekazywałoby Google adres IP każdego odwiedzającego, bez jego zgody i bez
+     podstawy prawnej — niemieckie sądy zasądzały za to odszkodowania (LG München,
+     20 O 17493/20). Tu nie wychodzi ani jedno żądanie poza własną domenę. -->
+<link rel="preload" as="font" type="font/woff2" href="fonts/bodoni-moda-400-normal-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/bodoni-moda-700-italic-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/inter-400-normal-latin.woff2" crossorigin>
+
+<style>
+/* ================= kroje pisma =================
+   Podzbiory z Google Fonts (Bodoni Moda i Inter, licencja OFL), okrojone do
+   ASCII, polskich znaków i interpunkcji typograficznej: 308 kB → 109 kB.
+   Podział latin / latin-ext zostaje, bo dzięki `unicode-range` przeglądarka
+   pobiera plik z ogonkami tylko wtedy, gdy naprawdę trafi na taki znak. */
+@font-face{font-family:'Bodoni Moda';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/bodoni-moda-400-normal-latin.woff2) format('woff2');unicode-range:U+0020-007E,U+00A0-00AC,U+00AE-00FF,U+2013-2014,U+2018-201A,U+201C-201E,U+2022,U+2026,U+20AC,U+2122}
+@font-face{font-family:'Bodoni Moda';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/bodoni-moda-400-normal-latin-ext.woff2) format('woff2');unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:'Bodoni Moda';font-style:italic;font-weight:700;font-display:swap;src:url(fonts/bodoni-moda-700-italic-latin.woff2) format('woff2');unicode-range:U+0020-007E,U+00A0-00AC,U+00AE-00FF,U+2013-2014,U+2018-201A,U+201C-201E,U+2022,U+2026,U+20AC,U+2122}
+@font-face{font-family:'Bodoni Moda';font-style:italic;font-weight:700;font-display:swap;src:url(fonts/bodoni-moda-700-italic-latin-ext.woff2) format('woff2');unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/inter-400-normal-latin.woff2) format('woff2');unicode-range:U+0020-007E,U+00A0-00AC,U+00AE-00FF,U+2013-2014,U+2018-201A,U+201C-201E,U+2022,U+2026,U+20AC,U+2122}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/inter-400-normal-latin-ext.woff2) format('woff2');unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/inter-500-normal-latin.woff2) format('woff2');unicode-range:U+0020-007E,U+00A0-00AC,U+00AE-00FF,U+2013-2014,U+2018-201A,U+201C-201E,U+2022,U+2026,U+20AC,U+2122}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/inter-500-normal-latin-ext.woff2) format('woff2');unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+
+:root{
+  /* ---- kolory (paleta z briefu + wyprowadzone) ---- */
+  --tlo:#F8E7E9;             /* pudrowy róż */
+  --tlo-alt:#FFFAFB;         /* biel różowa */
+  --tekst:#2B1119;           /* śliwka ciemna — 14.7:1 na --tlo */
+  --tekst-slaby:#7A5A60;     /* przygaszony róż — 5.1:1 na --tlo */
+  --akcent:#A32A4C;          /* róż burgundowy — 5.9:1 na --tlo, bezpieczny też dla drobnego tekstu */
+  --obramowanie:#EBD3D7;
+
+  /* warianty na ciemne przyciemnienie hero */
+  --tekst-jasny:#F8E7E9;         /* 9.8:1 na przyciemnieniu */
+  --tekst-jasny-slaby:#E3C7CD;   /* 7.5:1 */
+  --akcent-jasny:#F0A9BC;        /* 6.2:1 */
+  --scrim-rgb:43,17,25;
+
+  /* ---- typografia ---- */
+  --font-display:"Bodoni Moda",Didot,"Playfair Display",Georgia,serif;
+  --font-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+
+  /* ---- skala odstępów ---- */
+  --s-1:.5rem;
+  --s-2:1rem;
+  --s-3:1.75rem;
+  --s-4:3rem;
+  --s-5:5rem;
+  --s-6:8rem;
+
+  --pasek-h:4.5rem;
+  /* Zapas nad celem kotwicy. Nagłówek jest przyklejony i po przewinięciu ma
+     ~3.6rem, więc bez tego skok do sekcji chowa jej pierwszy wiersz pod
+     paskiem. Reszta to powietrze, żeby cel nie dotykał krawędzi. */
+  --kotwica:5.5rem;
+  --linia:1px;
+
+  /* ---- zaokrąglenia ---- */
+  --promien-s:.85rem;
+  --promien-m:1.6rem;
+  --promien-p:999px;
+  --welon:rgba(163,42,76,.08);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+/* Wszystko, w co da się trafić kotwicą — sekcje z menu, kategorie z kafelków
+   nad cennikiem i początek treści. Bez tego przeglądarka ustawia element
+   dokładnie na górze okna, czyli pod przyklejonym nagłówkiem. */
+.sekcja,.kategoria,#tresc{scroll-margin-top:var(--kotwica)}
+body{
+  margin:0;
+  background:var(--tlo);
+  color:var(--tekst);
+  font-family:var(--font-body);
+  font-size:1rem;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+body.menu-otwarte{overflow:hidden}
+h1,h2,h3,p,dl,dd,figure,blockquote{margin:0}
+ul,ol{margin:0;padding:0}
+li{list-style:none}
+a{color:inherit}
+
+:focus-visible{outline:2px solid var(--tekst);outline-offset:3px}
+
+.kontener{width:100%;max-width:76rem;margin:0 auto;padding-inline:var(--s-2)}
+.pomin{
+  position:absolute;left:var(--s-2);top:-6rem;z-index:80;
+  background:var(--tekst);color:var(--tlo);
+  padding:var(--s-1) var(--s-2);font-size:.85rem;text-decoration:none;
+  transition:top .15s ease;
+}
+.pomin:focus{top:var(--s-2)}
+
+/* ================= typografia pomocnicza ================= */
+.etykieta{
+  font-family:var(--font-body);
+  font-size:.7rem;font-weight:500;
+  letter-spacing:.13em;text-transform:uppercase;
+  color:var(--tekst-slaby);
+}
+.etykieta--akcent{color:var(--akcent)}
+
+.brak{
+  color:var(--akcent);
+  font-weight:500;
+  font-size:.85em;
+  letter-spacing:.02em;
+  background:var(--welon);
+  border-radius:var(--promien-p);
+  padding:.1em .7em;
+  white-space:normal;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+}
+/* w wąskich podpisach kadru pigułka rozpada się na strzępy — sam kolor wystarczy */
+.kadr__podpis .brak{background:none;padding:0;border-radius:0}
+
+/* ================= nagłówek ================= */
+.naglowek{
+  position:sticky;top:0;z-index:60;
+  background:var(--tlo);
+  border-bottom:var(--linia) solid var(--obramowanie);
+}
+.naglowek__rzad{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:var(--s-2);min-height:3.5rem;
+}
+/* Wysokość znaku podyktowana czytelnością, nie estetyką: poniżej ~4rem podpis
+   „Paulina Ślimak" zlewa się w kreskę. Po przewinięciu znak się zmniejsza —
+   wtedy ma już tylko przypominać, gdzie jesteś, a nie dawać się czytać. */
+.marka{display:flex;align-items:center;text-decoration:none}
+.marka img{
+  display:block;height:4rem;width:auto;
+  transition:height .25s ease;
+}
+.naglowek[data-zwiniety="true"] .marka img{height:2.4rem}
+
+.menu-btn{
+  display:inline-flex;align-items:center;gap:var(--s-1);
+  font-family:var(--font-body);font-size:.7rem;font-weight:500;
+  letter-spacing:.11em;text-transform:uppercase;
+  background:none;border:0;color:var(--tekst);cursor:pointer;
+  padding:var(--s-1);
+}
+.menu-btn:hover{color:var(--akcent)}
+
+.nawigacja{
+  position:fixed;inset:0;z-index:70;
+  background:var(--tlo);
+  display:none;flex-direction:column;justify-content:center;
+  gap:var(--s-2);padding:var(--s-4) var(--s-3);
+}
+.nawigacja[data-otwarte="true"]{display:flex}
+.nawigacja a{
+  font-family:var(--font-display);font-weight:400;
+  font-size:clamp(1.8rem,10vw,2.6rem);
+  letter-spacing:0;text-decoration:none;
+  padding-block:var(--s-1);
+}
+.nawigacja a:hover{color:var(--akcent)}
+.nawigacja__zamknij{position:absolute;top:var(--s-2);right:var(--s-2)}
+
+/* ================= przyciski ================= */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6em;
+  font-family:var(--font-body);font-weight:500;font-size:.92rem;
+  letter-spacing:.01em;text-decoration:none;
+  padding:var(--s-2) var(--s-4);
+  border:var(--linia) solid transparent;border-radius:var(--promien-p);cursor:pointer;
+  transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .2s ease;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn--glowny{background:var(--akcent);color:var(--tlo-alt);border-color:var(--akcent)}
+.btn--glowny:hover{background:var(--tekst);color:var(--tlo);border-color:var(--tekst)}
+.btn--drugi{background:transparent;color:var(--tekst);border-color:var(--tekst)}
+.btn--drugi:hover{background:var(--tekst);color:var(--tlo)}
+.btn svg{flex:none}
+
+/* Dopisek pod każdym „Umów wizytę". Celowo drobniejszy od przycisku: numer
+   ma zostać działaniem pierwszego wyboru, bo telefon odbiera się od razu,
+   a wiadomość dopiero wtedy, gdy ktoś zajrzy do skrzynki. Mimo to odsyłacze
+   dostają padding — sam tekst .85rem dawałby cel poniżej 24 px i na telefonie
+   trafiało by się w niego palcem co drugi raz. */
+.kanaly{
+  flex-basis:100%;width:100%;margin-top:var(--s-2);
+  display:flex;flex-wrap:wrap;align-items:center;gap:.5em;
+  font-size:.85rem;color:var(--tekst-slaby);
+}
+.kanaly a{
+  display:inline-flex;align-items:center;gap:.35em;padding-block:.4em;
+  color:var(--tekst);text-decoration:none;
+  border-bottom:var(--linia) solid var(--obramowanie);
+}
+.kanaly a:hover{color:var(--akcent);border-color:var(--akcent)}
+.finisz__cta .kanaly{justify-content:center}
+/* Hero leży na ciemnym welonie, więc obowiązuje tam odwrócona paleta —
+   te same barwy co u sąsiadującego .btn--drugi. */
+.hero .kanaly{color:var(--tekst-jasny-slaby)}
+.hero .kanaly a{color:var(--tekst-jasny);border-color:var(--tekst-jasny-slaby)}
+.hero .kanaly a:hover{color:var(--akcent-jasny);border-color:var(--akcent-jasny)}
+
+/* ================= ozdoby ================= */
+.ozdoba{
+  display:flex;align-items:center;justify-content:center;gap:var(--s-2);
+  color:var(--akcent);font-family:var(--font-display);font-size:1.05rem;
+}
+.ozdoba::before,.ozdoba::after{
+  content:"";height:var(--linia);width:min(7rem,20vw);background:var(--obramowanie);
+}
+
+/* ================= pas z zabiegami ================= */
+.pas{
+  overflow:hidden;
+  padding-block:var(--s-3);
+  background:var(--tlo-alt);
+  border-block:var(--linia) solid var(--obramowanie);
+}
+.pas__tor{display:flex;width:max-content;animation:przesuw 110s linear infinite}
+.pas__grupa{
+  display:flex;align-items:center;gap:var(--s-3);padding-right:var(--s-3);
+  font-family:var(--font-display);font-style:italic;font-weight:700;
+  font-size:clamp(1.25rem,4vw,1.9rem);white-space:nowrap;
+}
+.pas__gwiazdka{color:var(--akcent);font-style:normal;font-weight:400;font-size:.7em}
+@keyframes przesuw{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ================= hero: kadr na cały ekran ================= */
+.hero{
+  position:relative;isolation:isolate;
+  min-height:min(82svh,44rem);
+  display:flex;align-items:flex-end;
+  overflow:hidden;
+}
+.hero__tlo{position:absolute;inset:0;z-index:-2}
+.hero__tlo .kadr{
+  height:100%;border:0;border-radius:0;
+  /* znacznik kadru jako plakietka w rogu — nie może wchodzić na tekst hero */
+  align-items:flex-start;justify-content:flex-start;
+  gap:.2rem;padding:var(--s-2);text-align:left;
+  /* poświata zastępuje zdjęcie, dopóki go nie ma */
+  background:
+    radial-gradient(70% 55% at 50% 6%, var(--tlo-alt) 0%, transparent 68%),
+    linear-gradient(160deg, var(--tlo) 0%, var(--welon) 55%, var(--tlo-alt) 100%);
+}
+/* wyższa specyficzność niż reguła wyżej — inaczej poświata przebija zdjęcie */
+.hero__tlo .kadr--foto{background:none;padding:0}
+/* Panel pod tekstem zamiast gradientu na całej wysokości: tekst zawsze
+   leży na kryciu >=90%, więc kontrast nie zależy od jasności zdjęcia. */
+.hero__panel{
+  position:relative;width:100%;
+  padding-block:var(--s-6) var(--s-4);
+  background:linear-gradient(to top,
+    rgba(var(--scrim-rgb),.94) 0%,
+    rgba(var(--scrim-rgb),.90) 58%,
+    rgba(var(--scrim-rgb),.66) 86%,
+    rgba(var(--scrim-rgb),0) 100%);
+}
+.hero__tresc{position:relative;color:var(--tekst-jasny)}
+.hero__eyebrow{display:block;margin-bottom:var(--s-2);color:var(--tekst-jasny-slaby)}
+.hero h1{
+  font-family:var(--font-display);font-weight:400;
+  font-size:clamp(2.9rem,15vw,8.5rem);
+  line-height:.95;letter-spacing:-.015em;
+}
+.hero__linia{
+  display:block;overflow:hidden;
+  /* maska odsłaniania musi zostawić miejsce na ogonki kursywy (y, g, ż) */
+  padding-bottom:.18em;margin-bottom:-.18em;
+}
+.hero__linia > span{display:block;animation:wjazd .8s cubic-bezier(.2,.75,.2,1) both}
+.hero__linia:nth-of-type(2) > span{animation-delay:.09s}
+.hero__akcent{color:var(--akcent-jasny);font-style:italic;font-weight:700}
+.hero__cytat{
+  margin:var(--s-3) 0 0;max-width:32rem;
+  font-family:var(--font-display);font-style:italic;font-weight:700;
+  font-size:clamp(1.1rem,3.6vw,1.5rem);line-height:1.35;
+  animation:wjazd .8s ease .25s both;
+}
+.hero__cytat figcaption{
+  margin-top:var(--s-1);
+  font-family:var(--font-body);font-style:normal;font-weight:400;
+  font-size:.8rem;letter-spacing:.02em;color:var(--tekst-jasny-slaby);
+}
+.hero__dol{display:flex;flex-direction:column;gap:var(--s-3);margin-top:var(--s-3)}
+.hero__lead{
+  font-size:1rem;color:var(--tekst-jasny-slaby);max-width:34rem;
+  animation:wjazd .8s ease .35s both;
+}
+.hero__cta{display:flex;flex-wrap:wrap;gap:var(--s-2);animation:wjazd .8s ease .45s both}
+.hero .btn--drugi{color:var(--tekst-jasny);border-color:var(--tekst-jasny)}
+.hero .btn--drugi:hover{background:var(--tekst-jasny);color:var(--tekst)}
+/* znacznik kadru: kompaktowa plakietka w lewym górnym rogu */
+.hero .kadr__nr{position:static;font-size:.75rem;color:var(--akcent)}
+.hero .kadr__podpis{font-size:.7rem;max-width:22ch;color:var(--akcent)}
+.hero .kadr__nota{font-size:.65rem;color:var(--tekst-slaby)}
+.hero .kadr svg{width:20px;height:20px;order:-1}
+
+/* poświata w sekcji kontaktu */
+.sekcja--poswiata{position:relative;isolation:isolate}
+.sekcja--poswiata::before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(55% 60% at 15% 20%, var(--welon), transparent 70%),
+    radial-gradient(45% 55% at 88% 5%,  var(--welon), transparent 70%);
+}
+
+@keyframes wjazd{from{transform:translateY(.5em);opacity:0}to{transform:none;opacity:1}}
+
+/* ================= sekcje ================= */
+.sekcja{padding-block:var(--s-5)}
+.sekcja__glowa{margin-bottom:var(--s-4)}
+.sekcja__glowa h2{
+  font-family:var(--font-display);font-weight:400;
+  font-size:clamp(1.75rem,6.5vw,3rem);
+  line-height:1.08;letter-spacing:-.01em;
+  margin-top:var(--s-1);
+}
+.sekcja__wstep{margin-top:var(--s-2);color:var(--tekst-slaby);max-width:38rem}
+
+/* ================= kadr — placeholder zdjęcia (sygnatura) ================= */
+.kadr{
+  position:relative;
+  background:
+    radial-gradient(120% 100% at 50% 0%, var(--tlo-alt) 40%, var(--welon) 100%),
+    var(--tlo-alt);
+  border:var(--linia) solid var(--obramowanie);
+  border-radius:var(--promien-m);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:var(--s-2);padding:var(--s-3);text-align:center;
+  overflow:hidden;
+}
+.kadr__nr{
+  position:absolute;top:var(--s-2);left:var(--s-2);
+  font-family:var(--font-display);font-style:italic;font-weight:700;
+  font-size:.8rem;letter-spacing:0;
+  color:var(--akcent);
+}
+.kadr svg{color:var(--tekst-slaby)}
+/* kadr ze zdjęciem: pojemnik znika, zostaje samo zdjęcie w tych proporcjach */
+.kadr--foto{background:none;border:0;padding:0}
+/* <picture> jest elementem inline — bez tego zdjęcie nie wypełnia pojemnika */
+.kadr--foto picture{display:block;width:100%;height:100%}
+.kadr--foto img{display:block;width:100%;height:100%;object-fit:cover}
+.kadr__podpis{
+  font-size:.8rem;font-weight:500;letter-spacing:.02em;
+  color:var(--tekst);max-width:24ch;
+}
+.kadr__nota{font-size:.72rem;letter-spacing:.06em;color:var(--tekst-slaby)}
+
+.kadr--portret{aspect-ratio:4 / 5}
+
+/* ================= siatka kategorii ================= */
+.kategorie{
+  display:grid;gap:var(--s-2);grid-template-columns:repeat(2,1fr);
+  margin-bottom:var(--s-4);
+}
+.kategorie__karta{
+  display:flex;flex-direction:column;gap:.15rem;
+  background:var(--tlo-alt);border-radius:var(--promien-m);
+  padding:var(--s-2);text-decoration:none;
+  transition:transform .2s ease;
+}
+.kategorie__karta:hover{transform:translateY(-2px)}
+.kategorie__nazwa{
+  font-family:var(--font-display);font-weight:400;
+  font-size:clamp(1.1rem,4.4vw,1.35rem);line-height:1.15;
+}
+.kategorie__ile{font-size:.8rem;color:var(--tekst-slaby)}
+.kategorie__od{
+  font-family:var(--font-display);font-style:italic;font-weight:700;
+  font-size:1.05rem;color:var(--akcent);margin-top:var(--s-1);
+}
+
+/* ================= pierwsza wizyta ================= */
+.kroki{display:grid;gap:var(--s-3);grid-template-columns:1fr;counter-reset:krok}
+.kroki li{
+  counter-increment:krok;
+  background:var(--tlo-alt);border-radius:var(--promien-m);padding:var(--s-3);
+}
+.kroki li::before{
+  content:counter(krok);
+  display:block;
+  font-family:var(--font-display);font-style:italic;font-weight:700;
+  font-size:2.4rem;line-height:1;color:var(--akcent);
+  margin-bottom:var(--s-1);
+}
+.kroki h3{
+  font-family:var(--font-display);font-weight:400;font-size:1.3rem;
+  margin-bottom:var(--s-1);
+}
+.kroki p{color:var(--tekst-slaby);font-size:.95rem}
+
+/* ================= zamknięcie ================= */
+.finisz__karta{
+  background:var(--tlo-alt);border-radius:var(--promien-m);
+  padding:var(--s-4) var(--s-3);text-align:center;
+}
+.finisz__tytul{
+  font-family:var(--font-display);font-weight:400;
+  font-size:clamp(1.7rem,6vw,3rem);line-height:1.1;letter-spacing:-.01em;
+  max-width:22ch;margin-inline:auto;
+}
+.finisz__tekst{margin-top:var(--s-2);color:var(--tekst-slaby)}
+.finisz__cta{margin-top:var(--s-3);display:flex;flex-wrap:wrap;gap:var(--s-2);justify-content:center}
+
+/* ================= cennik — wielka lista typograficzna =================
+   Jednostką nadrzędną jest kategoria, nie osoba. Klientka szuka usługi
+   („ile kosztuje makijaż ślubny”), a nie stylistki, więc obie stawki muszą
+   stać obok siebie, a nie w dwóch miejscach strony. Podział na osoby żyje
+   w środku kategorii — dzięki temu każda kategoria ma też jedną kotwicę
+   i kafelki nad cennikiem prowadzą dokładnie tam, gdzie obiecują. */
+.kategoria + .kategoria{margin-top:var(--s-5)}
+.kategoria{
+  background:var(--tlo-alt);
+  border-radius:var(--promien-m);
+  padding:var(--s-3);
+}
+.kategoria__nazwa{
+  font-family:var(--font-display);font-weight:400;
+  font-size:clamp(1.5rem,5.5vw,2.3rem);
+  letter-spacing:-.005em;line-height:1.05;
+  padding-bottom:var(--s-2);
+}
+.kategoria__osoba{margin-top:var(--s-4)}
+.kategoria__osoba:first-of-type{margin-top:var(--s-2)}
+.kategoria__kto{
+  font-size:.7rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--tekst-slaby);margin-bottom:var(--s-1);
+}
+.cennik{border-top:var(--linia) solid var(--obramowanie)}
+.pozycja{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;
+  align-items:baseline;column-gap:var(--s-2);row-gap:.15rem;
+  padding-block:var(--s-2);
+  border-bottom:var(--linia) solid var(--obramowanie);
+  transition:color .2s ease;
+}
+.pozycja:hover{color:var(--akcent)}
+.pozycja__nazwa{
+  font-family:var(--font-display);font-weight:400;
+  font-size:clamp(1.05rem,4.2vw,1.75rem);
+  line-height:1.2;letter-spacing:-.005em;
+  grid-column:1;
+}
+.pozycja__czas{
+  grid-column:1 / -1;
+  font-size:.78rem;font-weight:500;letter-spacing:.02em;
+  color:var(--tekst-slaby);
+}
+.pozycja__czas:empty{display:none}
+.pozycja__cena{
+  grid-column:2;
+  font-family:var(--font-display);font-style:italic;font-weight:700;
+  font-size:clamp(1rem,3.5vw,1.35rem);
+  text-align:right;white-space:nowrap;color:var(--akcent);
+}
+.pozycja__dopisek{
+  grid-column:1 / -1;
+  font-size:.78rem;color:var(--tekst-slaby);
+}
+.cennik__nota{margin-top:var(--s-3);font-size:.85rem;color:var(--tekst-slaby);max-width:40rem}
+.cennik__czasy{margin-top:var(--s-2);font-size:.85rem;color:var(--tekst-slaby)}
+/* ================= zespół ================= */
+.zespol{display:grid;gap:var(--s-3);grid-template-columns:1fr;margin-top:var(--s-5)}
+.osoba{
+  background:var(--tlo-alt);
+  border-radius:var(--promien-m);
+  overflow:hidden;
+  display:flex;flex-direction:column;
+}
+/* pojemnik ma już zaokrąglenie i przycina — własne rogi zdjęcia zrobiłyby
+   szparę w miejscu styku z tekstem */
+.osoba__foto{border-radius:0}
+.osoba__tresc{
+  padding:var(--s-3);
+  display:flex;flex-direction:column;gap:var(--s-2);
+}
+.osoba__imie{
+  font-family:var(--font-display);font-weight:400;
+  font-size:clamp(1.5rem,5vw,2.1rem);line-height:1.1;letter-spacing:-.01em;
+}
+.osoba__rola{
+  font-family:var(--font-display);font-style:italic;font-weight:700;
+  font-size:.95rem;color:var(--akcent);margin-top:calc(var(--s-2) * -1 + .35rem);
+}
+.osoba__tresc p:not(.osoba__rola){font-size:.92rem;color:var(--tekst-slaby)}
+
+/* ================= o salonie ================= */
+.o-salonie{display:grid;gap:var(--s-4);grid-template-columns:1fr}
+.o-salonie__tekst{display:flex;flex-direction:column;gap:var(--s-3)}
+.o-salonie__cytat{
+  font-family:var(--font-display);font-style:italic;font-weight:700;
+  font-size:clamp(1.2rem,4.5vw,1.8rem);line-height:1.3;letter-spacing:-.005em;
+  color:var(--akcent);
+}
+.inicjal::first-letter{
+  float:left;font-family:var(--font-display);font-weight:400;
+  font-size:3.4em;line-height:.78;
+  padding-right:.07em;margin-top:.05em;
+  color:var(--akcent);
+}
+.fakty{border-top:var(--linia) solid var(--obramowanie)}
+.fakty > div{
+  display:flex;flex-wrap:wrap;gap:var(--s-1) var(--s-2);
+  justify-content:space-between;padding-block:var(--s-2);
+  border-bottom:var(--linia) solid var(--obramowanie);
+}
+.fakty dt{font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--tekst-slaby)}
+.fakty dd{font-size:.9rem;text-align:right}
+
+/* ================= opinie ================= */
+.opinie{display:grid;gap:var(--s-3);grid-template-columns:1fr}
+.opinia{
+  position:relative;overflow:hidden;
+  background:var(--tlo-alt);
+  border-radius:var(--promien-m);
+  padding:var(--s-3);
+  break-inside:avoid;
+}
+/* Ozdobny cudzysłów otwierający. Zapis \201E zamiast wklejonego znaku „ —
+   znak spoza ASCII w regule CSS rozsypuje się przy zmianie kodowania pliku
+   i wtedy wyświetla się przypadkowa litera. Nie wklejaj tu znaku wprost. */
+.opinia::before{
+  content:"\201E";position:absolute;top:-.28em;right:.12em;
+  font-family:var(--font-display);font-size:6rem;line-height:1;
+  color:var(--akcent);opacity:.14;pointer-events:none;
+}
+.opinia__tresc{font-size:.95rem;white-space:pre-line}
+.ocena{display:flex;gap:.15em;color:var(--akcent);margin-bottom:var(--s-1)}
+.ocena svg{fill:currentColor}
+.opinia__stopka{
+  margin-top:var(--s-2);padding-top:var(--s-2);
+  border-top:var(--linia) solid var(--obramowanie);
+  font-size:.78rem;font-weight:500;letter-spacing:.01em;
+  color:var(--tekst-slaby);
+}
+.opinia__autor{font-family:var(--font-display);font-size:.95rem}
+.opinia__zrodlo{
+  display:inline-flex;align-items:center;gap:.4em;
+  background:var(--welon);border-radius:var(--promien-p);
+  padding:.15em .7em;font-size:.72rem;color:var(--akcent);
+}
+.opinia__zrodlo svg{flex:none}
+.opinia__autor{color:var(--tekst)}
+.opinie__zrodlo{margin-top:var(--s-3);display:flex;flex-wrap:wrap;gap:var(--s-2);align-items:center}
+
+/* ================= efekty (portfolio) ================= */
+.efekty{display:grid;gap:var(--s-2);grid-template-columns:repeat(2,1fr)}
+
+/* ================= galeria ================= */
+.galeria{display:grid;gap:var(--s-3);grid-template-columns:1fr}
+
+/* ================= kontakt ================= */
+.kontakt{display:grid;gap:var(--s-4);grid-template-columns:1fr}
+.dane{display:flex;flex-direction:column;gap:var(--s-2);margin-bottom:var(--s-3)}
+.dane a,.dane p{
+  display:flex;gap:var(--s-2);align-items:flex-start;
+  font-size:1rem;text-decoration:none;
+}
+.dane a:hover{color:var(--akcent)}
+.dane svg{color:var(--akcent);flex:none;margin-top:.2em}
+
+.godziny{margin-top:var(--s-4);background:var(--tlo-alt);border-radius:var(--promien-m);padding:var(--s-3)}
+.godziny__rzad{
+  display:flex;align-items:baseline;justify-content:space-between;gap:var(--s-2);
+  padding-block:var(--s-2);border-bottom:var(--linia) solid var(--obramowanie);
+}
+.godziny__rzad:last-child{border-bottom:0}
+.godziny dt{font-size:.88rem;font-weight:500;letter-spacing:.01em}
+.godziny dd{font-size:.85rem;color:var(--tekst-slaby);white-space:nowrap}
+.godziny__rzad--dzis{color:var(--akcent)}
+.godziny__rzad--dzis dd{color:var(--akcent)}
+.godziny__dzis{
+  margin-left:var(--s-1);font-size:.68rem;letter-spacing:.02em;
+  background:var(--welon);border-radius:var(--promien-p);padding:.1em .7em;
+}
+
+.mapa__info{margin-top:var(--s-2);font-size:.78rem;color:var(--tekst-slaby)}
+.mapa__ramka{position:relative;border-radius:var(--promien-m);overflow:hidden}
+.mapa__ramka iframe{width:100%;aspect-ratio:16 / 10;border:0;display:block}
+.dojazd{
+  display:flex;flex-direction:column;align-items:center;gap:var(--s-2);
+  text-align:center;padding:var(--s-4) var(--s-3);
+  background:
+    radial-gradient(120% 100% at 50% 0%, var(--tlo-alt) 40%, var(--welon) 100%),
+    var(--tlo-alt);
+  border:var(--linia) solid var(--obramowanie);
+  border-radius:var(--promien-m);
+}
+.dojazd svg{color:var(--akcent)}
+.dojazd__adres{
+  font-family:var(--font-display);font-weight:400;
+  font-size:clamp(1.15rem,4vw,1.6rem);line-height:1.25;max-width:22ch;
+}
+.dojazd__miasto{white-space:nowrap}
+.dojazd__brak{font-size:.75rem;color:var(--tekst-slaby)}
+
+/* ================= stopka ================= */
+.stopka{
+  border-top:var(--linia) solid var(--obramowanie);
+  padding-block:var(--s-4);
+  padding-bottom:calc(var(--pasek-h) + var(--s-4));
+  font-size:.82rem;color:var(--tekst-slaby);
+}
+.stopka__rzad{display:flex;flex-direction:column;gap:var(--s-3)}
+.stopka a{color:var(--tekst);text-decoration:none}
+.stopka a:hover{color:var(--akcent)}
+.stopka__nazwa{
+  font-family:var(--font-display);font-weight:400;font-size:1.3rem;
+  letter-spacing:.01em;color:var(--tekst);
+}
+.stopka__znak{
+  display:block;width:13rem;max-width:100%;height:auto;
+  margin-bottom:var(--s-2);
+}
+
+/* ================= sticky pasek mobilny ================= */
+.pasek{
+  position:fixed;left:0;right:0;bottom:0;z-index:65;
+  /* Flex, a nie grid o stałej liczbie kolumn: gdy zabraknie adresu Instagrama
+     albo Facebooka, przycisk po prostu nie powstaje i pasek nadal się układa.
+     Siatka zostawiłaby w tym miejscu pustą kolumnę. */
+  display:flex;align-items:stretch;gap:var(--s-1);
+  padding:var(--s-1) var(--s-2) calc(var(--s-1) + env(safe-area-inset-bottom));
+  background:var(--tlo-alt);
+  border-top:var(--linia) solid var(--obramowanie);
+  border-radius:var(--promien-m) var(--promien-m) 0 0;
+}
+.pasek .btn{padding:var(--s-2) var(--s-1);font-size:.85rem;flex:1}
+.pasek .btn--glowny{flex:2}
+/* Kanały pisane skracają się w pasku do samej ikony — na 360 px nie ma miejsca
+   na cztery podpisy, a nazwa i tak jest w atrybucie aria-label. Padding wąski,
+   bo przy szerszym „Umów wizytę" łamie się na dwie linie i pasek rośnie do
+   77 px, zjadając ekran na najmniejszych telefonach. */
+/* Selektor musi być dwuczłonowy, bo .pasek .btn wyżej ma wyższą specyficzność
+   i inaczej narzuciłby tym przyciskom flex:1 — rosłyby jak pozostałe. */
+.pasek .pasek__ikona{flex:none;padding-inline:var(--s-1)}
+
+/* ================= breakpointy ================= */
+@media (min-width:768px){
+  .kontener{padding-inline:var(--s-3)}
+  /* Bez własnego paddingu: odstępy daje .hero__panel, który musi dochodzić
+     do samego dołu sekcji. Padding na .hero zostawiał pod panelem odsłonięty
+     pasek zdjęcia. Powietrze dokładamy w panelu, nie tutaj. */
+  .hero{min-height:min(90svh,50rem)}
+  .hero__panel{padding-block:calc(var(--s-6) * 1.5) var(--s-5)}
+  .hero__dol{flex-direction:row;justify-content:space-between;align-items:flex-end;gap:var(--s-4)}
+  .hero__cta{flex-direction:row;flex:none}
+  .sekcja{padding-block:var(--s-6)}
+  .menu-btn{display:none}
+  .nawigacja{
+    position:static;display:flex;flex-direction:row;inset:auto;
+    background:none;padding:0;gap:var(--s-3);align-items:center;justify-content:flex-end;
+  }
+  .nawigacja a{font-family:var(--font-body);font-size:.85rem;font-weight:500;letter-spacing:.01em}
+  .nawigacja__zamknij{display:none}
+  .o-salonie{grid-template-columns:1fr 1fr;gap:var(--s-5);align-items:start}
+  .zespol{grid-template-columns:repeat(2,1fr);gap:var(--s-4)}
+  .opinie{grid-template-columns:1fr 1fr}
+  .kroki{grid-template-columns:repeat(3,1fr)}
+  .finisz__karta{padding:var(--s-5) var(--s-4)}
+  .galeria{grid-template-columns:repeat(2,1fr)}
+  .efekty{grid-template-columns:repeat(3,1fr);gap:var(--s-3)}
+  .kontakt{grid-template-columns:1fr 1fr;gap:var(--s-5)}
+  .stopka{padding-bottom:var(--s-4)}
+  .stopka__rzad{flex-direction:row;justify-content:space-between}
+  .pasek{display:none}
+}
+@media (min-width:1100px){
+  .kontener{padding-inline:var(--s-4)}
+  .o-salonie{grid-template-columns:5fr 4fr}
+  .opinie{grid-template-columns:repeat(3,1fr)}
+  .kategorie{grid-template-columns:repeat(4,1fr)}
+  .galeria{grid-template-columns:repeat(3,1fr)}
+  .efekty{grid-template-columns:repeat(4,1fr)}
+  .galeria > :first-child{grid-column:span 2}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .pas__tor{animation:none !important;width:auto}
+  .pas{overflow-x:auto}
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<script>
+/* ======================================================================
+   DANE — jedyne miejsce z treścią.
+   Wszystko oznaczone [UZUPEŁNIĆ] czeka na materiały od klientki.
+   Zdjęć nie ma żadnych — sekcja `kadry` to lista ujęć do zrobienia.
+   ====================================================================== */
+const DANE = {
+  firma: {
+    nazwa: "Astaaroth Beauty",
+    typ: "Salon kosmetyczny",
+    miasto: "Tymbark",
+    url: "[UZUPEŁNIĆ — adres strony]",
+    nip: "[UZUPEŁNIĆ — NIP]"
+  },
+
+  telefon: {
+    wyswietlany: "883 027 207",
+    href: "tel:+48883027207"
+  },
+
+  /* Znak firmowy: PNG z białym tłem zamieniony na WebP z przezroczystością,
+     żeby położył się na różowym tle bez białego prostokąta dookoła. */
+  logo: {
+    plik: "img/logo.webp", szer: 569, wys: 246,
+    alt: "Astaaroth Beauty"
+  },
+
+  adres: {
+    ulica: "Armii Krajowej 55",
+    kod: "34-650",
+    miasto: "Tymbark",
+    kraj: "PL"
+  },
+
+  /* Współrzędne odczytane z adresu osadzenia mapy: `!3d` to szerokość, `!2d`
+     długość. Środek kadru mapy miejsca pokrywa się z jego pinezką, więc to ten
+     sam punkt, który Google pokazuje w wizytówce. */
+  geo: { lat: "49.7324452", lng: "20.3169050" },
+
+  /* CTA: docelowo podmień href na link do Booksy */
+  cta: {
+    tekst: "Umów wizytę",
+    href: "tel:+48883027207",
+    booksy: "[UZUPEŁNIĆ — link do Booksy]"
+  },
+
+  linki: {
+    mapa: "https://maps.app.goo.gl/yruE7LFDqaSt61wE8",
+    /* Nie jest to adres z „Umieść mapę”. Tamten ma przybliżenie zaszyte
+       w spakowanym ciągu `!1m18!1m12…` i nie da się go ruszyć — sprawdzone
+       na polach `1d` i `4f`, Google i tak dopasowuje kadr do miejsca.
+       Ten wariant przyjmuje przybliżenie wprost jako `z`:
+         z=16  cała okolica          z=18  ulica i sąsiednie lokale
+         z=17  kwartał z Biedronką   z=19  sam budynek
+       `hl=pl` to język etykiet, `output=embed` włącza tryb do ramki.
+       Klucz API niepotrzebny. Adres w `q` musi zgadzać się z wizytówką —
+       przy literówce Google pokaże środek miejscowości bez pinezki. */
+    mapaEmbed: "https://maps.google.com/maps?q=Astaaroth%20Beauty,%20Armii%20Krajowej%2055,%2034-650%20Tymbark&z=18&hl=pl&output=embed",
+    opinieGoogle: "https://maps.app.goo.gl/yruE7LFDqaSt61wE8",
+    instagram: "https://www.instagram.com/astaaroth/",
+    instagramNazwa: "@astaaroth",
+    facebook: "https://www.facebook.com/astaarothbeauty",
+    facebookNazwa: "Astaaroth Beauty",
+    email: "[UZUPEŁNIĆ — e-mail]"
+  },
+
+  godziny: [
+    { dow:1, dzien:"Poniedziałek", schema:"Monday",    zamkniete:true },
+    { dow:2, dzien:"Wtorek",       schema:"Tuesday",   zamkniete:true },
+    { dow:3, dzien:"Środa",        schema:"Wednesday", od:"07:00", do:"17:00" },
+    { dow:4, dzien:"Czwartek",     schema:"Thursday",  od:"07:00", do:"17:00" },
+    { dow:5, dzien:"Piątek",       schema:"Friday",    od:"07:00", do:"17:00" },
+    { dow:6, dzien:"Sobota",       schema:"Saturday",  od:"07:00", do:"15:00" },
+    { dow:0, dzien:"Niedziela",    schema:"Sunday",    od:"07:00", do:"15:00" }
+  ],
+
+  /* Cennik. Dwie stylistki, osobne stawki za te same zabiegi.
+     Pole `czas` zostaw puste, dopóki nie znasz czasu trwania — wiersz
+     wyrenderuje się bez niego, a brak sygnalizuje nota nad listą. */
+  specjalisci: [
+    {
+      imie: "Paulina",
+      rola: "Certyfikowana instruktorka makijażu i wizażystka",
+      /* Biogram w pierwszej osobie — to ma brzmieć jak jej własne słowa, bo
+         powstał z jej opisu na Instagramie. Zanim strona pójdzie w świat,
+         Paulina musi to przeczytać i zatwierdzić. */
+      bio: [
+        "Od zawsze ciągnęło mnie do sztuki. Malowałam portrety, najczęściej kobiece, i to w nich szukałam detalu i emocji. Tam się wszystko zaczęło.",
+        "W 2017 roku poszłam do szkoły wizażu Beauty Art Beaty Małachowskiej, która współpracowała z markami takimi jak Christian Dior i Chanel. Wtedy pasja zamieniła się w drogę, którą idę do dziś.",
+        "Astaaroth Beauty otworzyłam dwa lata później. Mam już ponad dziewięć lat w branży, prowadzę własne szkolenia i jestem stylistką brwi marki Pimp My Lashes."
+      ],
+      portret: {
+        plik:"img/paulina.webp", szer:1000, wys:1320, pozycja:"50% 25%",
+        alt:"Paulina, właścicielka salonu Astaaroth Beauty"
+      },
+      instagram: "https://www.instagram.com/astaaroth/",
+      instagramNazwa: "@astaaroth",
+      kategorie: [
+        { nazwa: "Makijaże", pozycje: [
+          { nazwa:"Makijaż kobiety dojrzałej",   cena:"250 zł", czas:"" },
+          { nazwa:"Makijaż ślubny",              cena:"350 zł", czas:"" },
+          { nazwa:"Makijaż próbny",              cena:"350 zł", czas:"" },
+          /* Pakiet ślubny. Ceny nie znam, więc stoi tu widoczny znacznik —
+             kwota wpisana „na oko” przy usłudze ślubnej to najgorsze możliwe
+             miejsce na zgadywanie. Wpisz cenę razem z tym, co pakiet obejmuje
+             i do ilu kilometrów dojazd jest wliczony. */
+          { nazwa:"Pakiet ślubny z dojazdem",    cena:"[UZUPEŁNIĆ — cena pakietu]", czas:"",
+            dopisek:"Makijaż w dniu ślubu u Ciebie. Zakres i zasięg dojazdu ustalamy przy rezerwacji." },
+          { nazwa:"Makijaż wieczorowy",          cena:"300 zł", czas:"" },
+          { nazwa:"Makijaż do sesji zdjęciowej", cena:"320 zł", czas:"" }
+        ]},
+        { nazwa: "Brwi", pozycje: [
+          { nazwa:"Regulacja brwi",                  cena:"40 zł",  czas:"" },
+          { nazwa:"Depilacja woskiem",               cena:"50 zł",  czas:"" },
+          { nazwa:"Farbka + regulacja",              cena:"100 zł", czas:"" },
+          { nazwa:"Laminacja + regulacja",           cena:"130 zł", czas:"" },
+          { nazwa:"Laminacja + farbka + regulacja",  cena:"170 zł", czas:"" },
+          { nazwa:"Męska stylizacja brwi",           cena:"70 zł",  czas:"" }
+        ]},
+        { nazwa: "Szkolenia", pozycje: [
+          { nazwa:"Lekcja makijażu dziennego",          cena:"600 zł",  czas:"" },
+          { nazwa:"Lekcja makijażu wieczorowego",       cena:"900 zł",  czas:"" },
+          { nazwa:"Lekcja doklejania kępek",            cena:"350 zł",  czas:"" },
+          { nazwa:"Lekcja malowania kresek",            cena:"200 zł",  czas:"" },
+          { nazwa:"Kurs dla początkującej",             cena:"2200 zł", czas:"" },
+          { nazwa:"Szkolenie doszkalające",             cena:"1800 zł", czas:"" },
+          { nazwa:"Szkolenie PRO",                      cena:"2500 zł", czas:"" },
+          { nazwa:"Nauka makijażu na wieczór panieński",cena:"2500 zł", czas:"" }
+        ]}
+      ]
+    },
+    {
+      imie: "Aldona",
+      rola: "Wizażystka, stylistka rzęs i brwi",
+      /* Jak wyżej: pierwsza osoba, na podstawie opisu z Instagrama, do
+         zatwierdzenia przez Aldonę. Nazwiska nie było w materiałach. */
+      bio: [
+        "Świat makijażu interesował mnie od zawsze, więc postanowiłam pójść w tym kierunku. Ukończyłam szkołę wizażu w Krakowie i tam nauczyłam się pracy z różnymi typami urody.",
+        "W Astaaroth Beauty pracuję od 2025 roku. Robię makijaże oraz stylizację rzęs i brwi.",
+        "Najbardziej lubię moment, w którym udaje mi się podkreślić czyjeś naturalne piękno. Makijaż to dla mnie nie tylko usługa — to sposób, żeby ktoś poczuł się wyjątkowo."
+      ],
+      portret: {
+        plik:"img/aldona.webp", szer:1000, wys:1322, pozycja:"50% 20%",
+        alt:"Aldona, wizażystka i stylistka rzęs w salonie Astaaroth Beauty"
+      },
+      instagram: "https://www.instagram.com/aldona_beauty_lash/",
+      instagramNazwa: "@aldona_beauty_lash",
+      kategorie: [
+        { nazwa: "Makijaże", pozycje: [
+          { nazwa:"Makijaż kobiety dojrzałej",   cena:"250 zł", czas:"" },
+          { nazwa:"Makijaż wieczorowy",          cena:"280 zł", czas:"" },
+          { nazwa:"Makijaż do sesji zdjęciowej", cena:"300 zł", czas:"" },
+          { nazwa:"Makijaż ślubny",              cena:"320 zł", czas:"" },
+          { nazwa:"Makijaż próbny",              cena:"320 zł", czas:"" },
+          { nazwa:"Insta Makeup",                cena:"320 zł", czas:"" }
+        ]},
+        { nazwa: "Stylizacja rzęs", pozycje: [
+          { nazwa:"Rzęsy 1:1",     cena:"170 zł", czas:"", dopisek:"Uzupełnienie do 4 tyg — 150 zł" },
+          { nazwa:"Rzęsy 2–3D",    cena:"190 zł", czas:"", dopisek:"Uzupełnienie do 4 tyg — 170 zł" },
+          { nazwa:"Rzęsy 3–4D",    cena:"210 zł", czas:"", dopisek:"Uzupełnienie do 4 tyg — 190 zł" },
+          { nazwa:"Mega Volume",   cena:"240 zł", czas:"", dopisek:"Uzupełnienie do 4 tyg — 220 zł" },
+          { nazwa:"Efekty",        cena:"+20 zł", czas:"" },
+          { nazwa:"Ściągnięcie",   cena:"50 zł",  czas:"" }
+        ]},
+        { nazwa: "Brwi", pozycje: [
+          { nazwa:"Regulacja brwi",                 cena:"30 zł",  czas:"" },
+          { nazwa:"Depilacja woskiem",              cena:"40 zł",  czas:"" },
+          { nazwa:"Farbka + regulacja",             cena:"80 zł",  czas:"" },
+          { nazwa:"Laminacja + regulacja",          cena:"100 zł", czas:"" },
+          { nazwa:"Laminacja + farbka + regulacja", cena:"150 zł", czas:"" }
+        ]}
+      ]
+    }
+  ],
+  czasyNota: "[UZUPEŁNIĆ — czasy trwania zabiegów]",
+  zabiegiNota: "[UZUPEŁNIĆ — polityka zadatku i zasady odwoływania wizyt]",
+
+  oSalonie: {
+    /* Biogramy niżej są w pierwszej osobie i same się przedstawiają. Te dwa
+       zdania mają więc odpowiedzieć na pytanie praktyczne — do kogo się zapisać
+       — a nie streszczać tego, co za chwilę powiedzą same. */
+    /* Puste = akapit wyróżniony w ogóle się nie renderuje. Wpisz tu zdanie,
+       jeśli kiedyś ma wrócić — reszta sekcji sama zrobi mu miejsce. */
+    cytat: "",
+    tekst: "Paulina prowadzi salon i szkoli z makijażu. Aldona robi makijaże oraz stylizację rzęs i brwi. Terminarze i cenniki mają osobne, więc dzwoniąc, powiedz od razu, do której chcesz się umówić.",
+    fakty: [
+      { nazwa:"Salon działa od", wartosc:"2019 roku" },
+      { nazwa:"Zespół", wartosc:"Dwie stylistki — osobne terminy i osobne cenniki" },
+      { nazwa:"Kosmetyki", wartosc:"[UZUPEŁNIĆ — marki, na których pracują]" },
+      { nazwa:"Rezerwacja", wartosc:"Telefonicznie, przez Instagram lub Facebook" }
+    ]
+  },
+
+  /* Sekcja „Pierwsza wizyta" — trzy kroki, zanim klientka przyjdzie. */
+  pierwszaWizyta: [
+    { krok:"Odezwij się",
+      tresc:"Zadzwoń albo napisz na Instagramie lub Facebooku. Powiedz, na jaki zabieg i na kiedy potrzebujesz terminu — dobierzemy stylistkę i długość wizyty. Telefonem ustalisz to od ręki." },
+    { krok:"Przygotuj się",
+      tresc:"[UZUPEŁNIĆ — o czym uprzedzić klientkę przed wizytą: makijaż, soczewki, karmienie, przeciwwskazania]" },
+    { krok:"Potwierdź termin",
+      tresc:"[UZUPEŁNIĆ — czy obowiązuje zadatek, w jakiej wysokości i jak go wpłacić]" }
+  ],
+
+  /* Opinie przepisane dosłownie z wizytówki Google. Nic tu nie zmieniaj
+     bez sprawdzenia źródła — to cudze wypowiedzi. */
+  opinie: [
+    { ocena:5, autor:"Justyna Pająk", kiedy:"2 lata temu",
+      tresc:"Pani Paulina jest fantastyczną osobą, która robi przepiękne, a co najważniejsze- trwałe makijaże ❤️ bez wahania skorzystałam z jej usług w szczególnym dniu jakim był mój ślub. Czułam się bardzo wyjątkowo. Makijaż był tak perfekcyjnie wykonany, że nie było możliwości czegokolwiek poprawiać. Polecam każdemu bo warto! ❤️❤️❤️" },
+    { ocena:5, autor:"Joanna Dębska", kiedy:"3 miesiące temu",
+      tresc:"Fantastyczne miejsce. Makijaż wykonany starannie i profesjonalnie. Paulina nie tylko świetnie doradza, ale i słucha klientek przez co makijaż jest dopasowany nie tylko do cery, ale i osobowości. Poza tym to przebojowa i przemiła osoba dzięki czemu pobyt w tym salonie to czysta przyjemność." },
+    { ocena:5, autor:"Natalia Lis", kiedy:"2 lata temu",
+      tresc:"Polecam ! Paulina to idealna osoba, która perfekcyjnie wykonuje swoją pracę! Z chęcią wracam do Pauliny na makijaże, ponieważ zawsze są wspaniale wykonane, dopraciwane,wytrzymałe a co najważniejsze Paulina potrafi idealnie dobrać makijaż do urody. 😊" },
+    { ocena:5, autor:"Joanna", kiedy:"1 rok temu",
+      tresc:"Makijaż profesjonalny, trwały i estetyczny - trzymał się całą noc (nawet szminka)!\nPani Paulina bardzo dba o higienie pracy i sterylność narzędzi - ja osobiście bardzo na to zwracam uwagę.\nMogę śmiało stwierdzić, że to najlepsza makijażystka w powiecie limanowskim!\nNapewno wrócę nieraz." },
+    { ocena:5, autor:"Justyna Klęsk", kiedy:"2 lata temu",
+      tresc:"Paulina to artystka , każdy pomysł z jakim do niej przyszłam był finalnie lepszy niż ten z inspiracji.\nAtutem są kosmetyki z górnej półki, nigdy nie musiałam się poprawiać  w trakcie imprezy, nawet jako Pani Młoda. W tym najważniejszym dniu Paulina zrobiła wszystko żebym była zadowolona (zarówno względem atmosfery jak i samego makijażu).\nPolecam z całego serca 💜💜" },
+    { ocena:5, autor:"Martyna Wnęk", kiedy:"2 lata temu",
+      tresc:"Polecam z całego serca cudowna dziewczyna z super talentem.Miałam przyjemność skorzystać z jej usług podczas pakietu ślubnego cudowna atmosfera podczas tego jedynego dnia, makijaż cudowny przetrwał cała noc, napewno jeśli bym miała jeszcze raz kogoś wybrać wybrała bym Panią Paulinę ❤️" },
+    { ocena:5, autor:"Karolina Peterszajn", kiedy:"2 lata temu",
+      tresc:"Paulina zawsze sprawia, że czuję się piękna. Zdolna kobieta na właściwym  miejscu. Zawsze z genialnymi pomysłami i zaangażowaniem. Nie wypuści z salonu bez perfekcyjnego makijażu. Polecam serdecznie!" },
+    { ocena:5, autor:"Iwona Rybka-Pajor", kiedy:"2 lata temu",
+      tresc:"Serdecznie polecam wszystkim! Pełen profesjonalizm. Pani jest artystką ♥️ Podczas wizyty panuje świetna atmosfera ❤️ Mega trwały makijaż :)" },
+    { ocena:5, autor:"Mariola Opyd", kiedy:"2 lata temu",
+      tresc:"Serdecznie polecam! Korzystałam z usług, zarówno makijażu okolicznościowego jak i warsztatów- jestem bardzo zadowolona! Z pewnością tu wrócę!" }
+  ],
+  opinieZrodlo: "Google",
+  /* Skala ocen w Google. Gdyby kiedyś doszła opinia z inną liczbą gwiazdek,
+     zmień `ocena` przy tej jednej pozycji — reszta zadziała sama. */
+  opinieMax: 5,
+  /* Średnia i łączna liczba opinii z wizytówki Google. Potrzebne do schema.org
+     (gwiazdki w wynikach wyszukiwania). Musi zgadzać się z tym, co pokazuje
+     Google — nie z liczbą opinii przepisanych niżej. */
+  opinieOgolem: "[UZUPEŁNIĆ — łączna liczba opinii w Google]",
+  opinieSrednia: "[UZUPEŁNIĆ — średnia ocena w Google, kropka nie przecinek: 5.0]",
+
+  /* Cytat w hero pochodzi z prawdziwej opinii — `fragment` musi dosłownie
+     występować w opinie[indeks].tresc, inaczej sekcja się nie wyrenderuje. */
+  heroCytat: { indeks: 1, fragment: "makijaż jest dopasowany nie tylko do cery, ale i osobowości" },
+
+  /* Lista ujęć do zrobienia na sesji zdjęciowej. Po sesji podmieniasz
+     każdy `kadr` na <img> o tych samych proporcjach — układ nie drgnie. */
+  kadry: {
+    /* Zdjęcie wstawione — obecność pola `plik` zamienia placeholder na <img>.
+       Usuń `plik`, a wróci pusty kadr z podpisem. `pozycja` to object-position:
+       decyduje, który wycinek szerokiego zdjęcia widać na wąskim ekranie. */
+    hero: {
+      plik:"img/hero.webp",       szer:1646, wys:792,
+      plikWaski:"img/hero-waski.webp", szerWaski:594, wysWaski:792,
+      pierwszy:true, pozycja:"50% 35%",
+      alt:"Kolaż zbliżeń na makijaże ślubne i wieczorowe wykonane w salonie Astaaroth Beauty",
+      podpis:"[ZDJĘCIE — hero, tło na cały ekran]", nota:"Pion na telefonie, poziom na desktopie"
+    },
+
+    /* Portfolio: makijaże na klientkach. Podpisy odpowiadają nazwom
+       zabiegów z cennika, więc po sesji wiadomo, co pod co podstawić. */
+    /* Pliki są już przycięte do proporcji z pola `prop` — object-fit:cover nie
+       ma tu nic do odcięcia. Podmieniając zdjęcie zachowaj te wymiary, inaczej
+       kadr się przytnie po raz drugi, tym razem przypadkowo. */
+    efekty: [
+      { plik:"img/efekt-1.webp", szer:800, wys:1000, prop:"4 / 5",
+        alt:"Delikatny makijaż ślubny w ciepłych brązach, z podkreśloną kreską i miękko wymodelowanymi brwiami" },
+      { plik:"img/efekt-2.webp", szer:800, wys:1000, prop:"4 / 5",
+        alt:"Makijaż wieczorowy z graficzną czerwoną kreską i rozświetloną cerą" },
+      { plik:"img/efekt-3.webp", szer:800, wys:1000, prop:"4 / 5",
+        alt:"Mocny makijaż okolicznościowy z ciemną kreską, cieniowaniem powieki i sztucznymi rzęsami" },
+      { plik:"img/efekt-4.webp", szer:800, wys:1000, prop:"4 / 5",
+        alt:"Nude makijaż dzienny z czarną kreską i satynowym wykończeniem skóry" },
+      { plik:"img/efekt-5.webp", szer:800, wys:800, prop:"1 / 1",
+        alt:"Zbliżenie na dymny makijaż oka w odcieniach zieleni z brokatem" },
+      { plik:"img/efekt-6.webp", szer:800, wys:800, prop:"1 / 1",
+        alt:"Zbliżenie na makijaż z różowymi kryształkami ułożonymi wzdłuż łuku brwiowego" },
+      { plik:"img/efekt-7.webp", szer:800, wys:800, prop:"1 / 1",
+        alt:"Kreatywny makijaż do sesji zdjęciowej z żółtą graficzną kreską" },
+      { plik:"img/efekt-8.webp", szer:800, wys:1000, prop:"4 / 5",
+        alt:"Zbliżenie na efekt stylizacji rzęs i laminacji brwi" }
+    ],
+    galeria: [
+      { podpis:"[ZDJĘCIE — wnętrze salonu]",     nota:"Poziom 3:2",  prop:"3 / 2" },
+      { podpis:"[ZDJĘCIE — stanowisko pracy]",   nota:"Pion 4:5",    prop:"4 / 5" },
+      { podpis:"[ZDJĘCIE — efekt zabiegu 1]",    nota:"Pion 4:5",    prop:"4 / 5" },
+      { podpis:"[ZDJĘCIE — efekt zabiegu 2]",    nota:"Kwadrat 1:1", prop:"1 / 1" },
+      { podpis:"[ZDJĘCIE — efekt zabiegu 3]",    nota:"Kwadrat 1:1", prop:"1 / 1" },
+      { podpis:"[ZDJĘCIE — detal: kosmetyki]",   nota:"Kwadrat 1:1", prop:"1 / 1" }
+    ]
+  },
+
+  efektyNota: "[UZUPEŁNIĆ — zdanie o zgodzie klientek na publikację wizerunku]",
+
+  mapaInfo: "Mapa Google wczytuje się dopiero po kliknięciu. Do tego momentu Google nie zapisuje na Twoim urządzeniu żadnych plików cookie.",
+
+  seo: {
+    schemaTyp: "BeautySalon",
+    priceRange: "30–2500 zł",
+    /* `obraz` to zdjęcie salonu albo pracy — Google używa go w wizytówce
+       i panelu wiedzy. Znak firmowy tego nie zastąpi, dlatego idzie osobno,
+       jako `logo`. Oba adresy muszą być pełne, z domeną. */
+    obraz: "[UZUPEŁNIĆ — pełny adres zdjęcia salonu lub pracy]",
+    znak: "[UZUPEŁNIĆ — adres strony]/img/logo.webp"
+  }
+};
+</script>
+
+<a class="pomin" href="#tresc">Przejdź do treści</a>
+
+<header class="naglowek">
+  <div class="kontener naglowek__rzad">
+    <!-- Znak firmowy wpisany wprost w HTML, a nie renderowany z DANE: to
+         pierwszy element nad zgięciem i nie może mrugnąć po starcie skryptu.
+         Ścieżka musi się zgadzać z DANE.logo.plik. -->
+    <a class="marka" href="#gora">
+      <img src="img/logo.webp" width="569" height="246" alt="Astaaroth Beauty" fetchpriority="high">
+    </a>
+
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nawigacja">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+      Menu
+    </button>
+
+    <nav class="nawigacja" id="nawigacja" aria-label="Nawigacja główna">
+      <button class="menu-btn nawigacja__zamknij" id="menu-zamknij">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        Zamknij
+      </button>
+      <a href="#zabiegi">Zabiegi</a>
+      <a href="#efekty">Efekty</a>
+      <a href="#pierwsza-wizyta">Pierwsza wizyta</a>
+      <a href="#o-salonie">O salonie</a>
+      <a href="#opinie">Opinie</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="tresc">
+  <span id="gora"></span>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__tlo" id="hero-kadr"></div>
+    <div class="hero__panel">
+    <div class="kontener hero__tresc">
+      <span class="etykieta hero__eyebrow" id="hero-eyebrow"></span>
+      <h1>
+        <span class="hero__linia"><span>Astaaroth</span></span>
+        <span class="hero__linia"><span class="hero__akcent">Beauty</span></span>
+      </h1>
+      <figure class="hero__cytat" id="hero-cytat"></figure>
+      <div class="hero__dol">
+        <p class="hero__lead" id="hero-lead"></p>
+        <div class="hero__cta" id="hero-cta"></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ============ PAS Z ZABIEGAMI ============ -->
+  <div class="pas" aria-hidden="true"><div class="pas__tor" id="pas"></div></div>
+
+  <div class="ozdoba" aria-hidden="true">✻</div>
+
+  <!-- ============ ZABIEGI ============ -->
+  <section class="sekcja" id="zabiegi" aria-labelledby="zabiegi-h2">
+    <div class="kontener">
+      <div class="sekcja__glowa">
+        <span class="etykieta">Zabiegi i ceny</span>
+        <h2 id="zabiegi-h2">Cennik</h2>
+        <p class="sekcja__wstep">W salonie pracują dwie stylistki. Te same zabiegi mają u nich różne stawki, więc przy rezerwacji powiedz, do kogo się umawiasz.</p>
+      </div>
+      <div class="kategorie" id="kategorie"></div>
+      <p class="cennik__czasy" id="cennik-czasy"></p>
+      <div id="cennik"></div>
+      <p class="cennik__nota" id="cennik-nota"></p>
+      <div style="margin-top:var(--s-4)" id="zabiegi-cta"></div>
+    </div>
+  </section>
+
+  <div class="ozdoba" aria-hidden="true">✻</div>
+
+  <!-- ============ PIERWSZA WIZYTA ============ -->
+  <section class="sekcja" id="pierwsza-wizyta" aria-labelledby="pierwsza-wizyta-h2">
+    <div class="kontener">
+      <div class="sekcja__glowa">
+        <span class="etykieta">Zanim przyjdziesz</span>
+        <h2 id="pierwsza-wizyta-h2">Pierwsza wizyta</h2>
+      </div>
+      <ol class="kroki" id="kroki"></ol>
+    </div>
+  </section>
+
+  <div class="ozdoba" aria-hidden="true">✻</div>
+
+  <!-- ============ EFEKTY ============ -->
+  <section class="sekcja" id="efekty" aria-labelledby="efekty-h2">
+    <div class="kontener">
+      <div class="sekcja__glowa">
+        <span class="etykieta">Portfolio</span>
+        <h2 id="efekty-h2">Efekty na klientkach</h2>
+        <p class="sekcja__wstep" id="efekty-nota"></p>
+      </div>
+      <div class="efekty" id="efekty-lista"></div>
+    </div>
+  </section>
+
+  <div class="ozdoba" aria-hidden="true">✻</div>
+
+  <!-- ============ O SALONIE ============ -->
+  <section class="sekcja" id="o-salonie" aria-labelledby="o-salonie-h2">
+    <div class="kontener">
+      <div class="sekcja__glowa">
+        <span class="etykieta">O salonie</span>
+        <h2 id="o-salonie-h2">Poznaj nas</h2>
+      </div>
+      <div class="o-salonie">
+        <div class="o-salonie__tekst">
+          <p class="o-salonie__cytat" id="o-cytat"></p>
+          <p id="o-tekst"></p>
+        </div>
+        <dl class="fakty" id="o-fakty"></dl>
+      </div>
+      <div class="zespol" id="zespol"></div>
+    </div>
+  </section>
+
+  <div class="ozdoba" aria-hidden="true">✻</div>
+
+  <!-- ============ OPINIE ============ -->
+  <section class="sekcja" id="opinie" aria-labelledby="opinie-h2">
+    <div class="kontener">
+      <div class="sekcja__glowa">
+        <span class="etykieta">Opinie</span>
+        <h2 id="opinie-h2">Co mówią klientki</h2>
+        <p class="sekcja__wstep">Wszystkie opinie pochodzą z wizytówki Google i są przepisane bez zmian.</p>
+      </div>
+      <div class="opinie" id="opinie-lista"></div>
+      <div class="opinie__zrodlo" id="opinie-zrodlo"></div>
+    </div>
+  </section>
+
+  <div class="ozdoba" aria-hidden="true">✻</div>
+
+  <!-- ============ GALERIA / LISTA KADRÓW ============ -->
+  <section class="sekcja" id="galeria" aria-labelledby="galeria-h2">
+    <div class="kontener">
+      <div class="sekcja__glowa">
+        <span class="etykieta etykieta--akcent">Do zrobienia na sesji</span>
+        <h2 id="galeria-h2">Lista kadrów</h2>
+        <p class="sekcja__wstep">Salon nie ma jeszcze własnych zdjęć. Każda ramka to jedno ujęcie do zrobienia — w docelowych proporcjach, więc po sesji układ strony się nie zmieni.</p>
+      </div>
+      <div class="galeria" id="galeria"></div>
+    </div>
+  </section>
+
+  <!-- ============ KONTAKT ============ -->
+  <section class="sekcja sekcja--poswiata" id="kontakt" aria-labelledby="kontakt-h2">
+    <div class="kontener">
+      <div class="sekcja__glowa">
+        <span class="etykieta">Kontakt</span>
+        <h2 id="kontakt-h2">Umów wizytę</h2>
+        <p class="sekcja__wstep">Terminy ustalamy telefonicznie. Zadzwoń i powiedz, na kiedy potrzebujesz makijażu.</p>
+      </div>
+
+      <div class="kontakt">
+        <div>
+          <div class="dane" id="dane"></div>
+          <div id="kontakt-cta"></div>
+
+          <div class="godziny">
+            <span class="etykieta">Godziny otwarcia</span>
+            <dl id="godziny"></dl>
+          </div>
+        </div>
+
+        <div>
+          <span class="etykieta">Dojazd</span>
+          <div class="mapa__ramka" id="mapa-ramka" style="margin-top:var(--s-2)"></div>
+          <p class="mapa__info" id="mapa-info"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ============ ZAMKNIĘCIE ============ -->
+  <section class="sekcja finisz" aria-labelledby="finisz-h2">
+    <div class="kontener">
+      <div class="finisz__karta">
+        <h2 class="finisz__tytul" id="finisz-h2">Każdy makijaż zaczyna się&nbsp;od&nbsp;rozmowy</h2>
+        <p class="finisz__tekst">Zadzwoń albo napisz i powiedz, na jaką okazję. Resztę ustalimy razem.</p>
+        <div class="finisz__cta" id="finisz-cta"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="stopka">
+  <div class="kontener stopka__rzad" id="stopka"></div>
+</footer>
+
+<div class="pasek" id="pasek"></div>
+
+<script>
+(function () {
+  "use strict";
+
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) =>
+    ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]));
+
+  /* zaznacza [UZUPEŁNIĆ] / [ZDJĘCIE] jako celowy element projektu */
+  const oznacz = (s) => esc(s).replace(/\[(UZUPEŁNIĆ|ZDJĘCIE)[^\]]*\]/g,
+    (m) => '<span class="brak">' + m + "</span>");
+
+  const brak = (v) => typeof v === "string" && v.indexOf("[UZUPEŁNIĆ") !== -1;
+  const el = (id) => document.getElementById(id);
+
+  const IKONY = {
+    aparat: '<path d="M3 8.5A1.5 1.5 0 014.5 7h2.2l1.2-2h8.2l1.2 2h2.2A1.5 1.5 0 0121 8.5v9A1.5 1.5 0 0119.5 19h-15A1.5 1.5 0 013 17.5v-9z"/><circle cx="12" cy="13" r="3.6"/>',
+    telefon:'<path d="M5 4h3l2 5-2.2 1.3a12 12 0 005.9 5.9L15 14l5 2v3a2 2 0 01-2.2 2A16 16 0 013 6.2 2 2 0 015 4z"/>',
+    pin:    '<path d="M12 21s7-6.1 7-11a7 7 0 10-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/>',
+    mapa:   '<path d="M9 4L3 7v13l6-3 6 3 6-3V4l-6 3-6-3z"/><path d="M9 4v13M15 7v13"/>',
+    gwiazda:'<path d="M12 4l2.5 5.1 5.5.8-4 3.9.9 5.5L12 16.7 7.1 19.3l.9-5.5-4-3.9 5.5-.8L12 4z"/>',
+    /* Znaki serwisów rysowane konturem, a nie pobierane z ich zestawów — te są
+       wypełnione i w tym rzędzie ikon wyglądałyby jak dwie kleksy obok kresek. */
+    instagram:'<rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4"/><circle cx="16.9" cy="7.1" r=".6"/>',
+    facebook: '<rect x="3" y="3" width="18" height="18" rx="5.2"/><path d="M15.4 8h-1.1a1.8 1.8 0 00-1.8 1.8V12m-1.7 0h3.5m-1.8 0v6"/>'
+  };
+
+  const svg = (nazwa, r) =>
+    '<svg width="' + r + '" height="' + r + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+    + 'stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+    + IKONY[nazwa] + "</svg>";
+
+  /* Wiersz kontaktowy z ikoną. Bez adresu nie powstaje martwy odsyłacz, tylko
+     zwykły akapit z widocznym [UZUPEŁNIĆ] — pusty link da się kliknąć i nic
+     nie robi, a to gorsze niż przyznanie się, że czegoś jeszcze nie ma. */
+  const link = (adres, ikona, etykieta) =>
+    brak(adres)
+      ? "<p>" + svg(ikona, 20) + "<span>" + oznacz(adres) + "</span></p>"
+      : '<a href="' + esc(adres) + '" target="_blank" rel="noopener">'
+        + svg(ikona, 20) + "<span>" + esc(etykieta || adres) + "</span></a>";
+
+  /* --- kadr: zdjęcie albo jego placeholder ---
+     Ten sam pojemnik i te same proporcje w obu przypadkach, więc podmiana
+     placeholdera na zdjęcie nie rusza układu strony. */
+  let licznikKadru = 0;
+  function kadr(dane, klasa, styl) {
+    licznikKadru += 1;
+    const nr = String(licznikKadru).padStart(2, "0");
+    const styleAttr = styl ? ' style="' + styl + '"' : "";
+
+    if (dane.plik) {
+      const obraz = '<img src="' + esc(dane.plik) + '" alt="' + esc(dane.alt) + '"'
+        + ' width="' + dane.szer + '" height="' + dane.wys + '"'
+        /* hero to element LCP — nie wolno go leniwie ładować */
+        + (dane.pierwszy ? ' fetchpriority="high" decoding="async"'
+                         : ' loading="lazy" decoding="async"')
+        + (dane.pozycja ? ' style="object-position:' + esc(dane.pozycja) + '"' : "")
+        + ">";
+
+      /* Szerokie zdjęcie na wąskim ekranie zostaje z niego pasek. Jeśli kadr ma
+         `plikWaski`, telefon dostaje osobne, pionowe wycięcie — a nie ten sam
+         plik przycięty na ślepo przez object-fit. Próg 767px musi się zgadzać
+         z <link rel="preload"> w <head>, inaczej pobiorą się oba pliki. */
+      const zrodlo = dane.plikWaski
+        ? '<source media="(max-width:767px)" srcset="' + esc(dane.plikWaski) + '"'
+          + ' width="' + dane.szerWaski + '" height="' + dane.wysWaski + '">'
+        : "";
+
+      return '<div class="kadr kadr--foto ' + (klasa || "") + '"' + styleAttr + ">"
+        + (zrodlo ? "<picture>" + zrodlo + obraz + "</picture>" : obraz)
+        + "</div>";
+    }
+
+    return '<div class="kadr ' + (klasa || "") + '"' + styleAttr + ' role="img" '
+      + 'aria-label="Miejsce na zdjęcie: ' + esc(dane.podpis) + '">'
+      + '<span class="kadr__nr">Kadr ' + nr + "</span>"
+      + svg("aparat", 30)
+      + '<span class="kadr__podpis">' + oznacz(dane.podpis) + "</span>"
+      + '<span class="kadr__nota">' + esc(dane.nota) + "</span>"
+      + "</div>";
+  }
+
+  const przyciskCta = (klasa, tekst) =>
+    '<a class="btn ' + klasa + '" href="' + esc(DANE.cta.href) + '">' + svg("telefon", 16) + esc(tekst) + "</a>";
+
+  /* Kanały pisane, wspólne dla wszystkich miejsc z „Umów wizytę". Jedno źródło,
+     więc dopisanie trzeciego serwisu to jedna linijka tutaj, a nie cztery
+     poprawki w czterech sekcjach. Kanał bez adresu w ogóle nie powstaje. */
+  const KANALY = [
+    ["instagram", "Instagram"],
+    ["facebook",  "Facebook"]
+  ];
+  const kanalyDostepne = () =>
+    KANALY.filter((k) => DANE.linki[k[0]] && !brak(DANE.linki[k[0]]));
+
+  const kanalyCta = () => {
+    const poz = kanalyDostepne().map((k) =>
+      '<a href="' + esc(DANE.linki[k[0]]) + '" target="_blank" rel="noopener">'
+      + svg(k[0], 14) + esc(k[1]) + "</a>");
+    return poz.length
+      ? '<p class="kanaly">Wolisz napisać?' + poz.join("") + "</p>"
+      : "";
+  };
+
+  /* Wersja do paska mobilnego: sama ikona, nazwa tylko dla czytnika ekranu. */
+  const kanalyIkony = () => kanalyDostepne().map((k) =>
+    '<a class="btn btn--drugi pasek__ikona" href="' + esc(DANE.linki[k[0]]) + '"'
+    + ' target="_blank" rel="noopener" aria-label="Napisz przez ' + esc(k[1]) + '">'
+    + svg(k[0], 18) + "</a>").join("");
+
+  /* ---------- hero ---------- */
+  el("hero-eyebrow").textContent =
+    DANE.firma.typ + " · " + DANE.adres.ulica + " · " + DANE.firma.miasto;
+  el("hero-lead").textContent =
+    "Kosmetyczka w Tymbarku. Makijaż okolicznościowy i ślubny, stylizacja brwi i rzęs, "
+    + "szkolenia makijażowe. Dwie stylistki, zapisy telefonicznie lub przez media społecznościowe.";
+  el("hero-cta").innerHTML =
+    przyciskCta("btn--glowny", DANE.cta.tekst)
+    + '<a class="btn btn--drugi" href="' + esc(DANE.telefon.href) + '">'
+    + esc(DANE.telefon.wyswietlany) + "</a>"
+    + kanalyCta();
+
+  /* cytat w hero — renderowany tylko, jeśli fragment naprawdę jest w opinii */
+  const zrodloCytatu = DANE.opinie[DANE.heroCytat.indeks];
+  if (zrodloCytatu && zrodloCytatu.tresc.indexOf(DANE.heroCytat.fragment) !== -1) {
+    el("hero-cytat").innerHTML =
+      "<blockquote>„…" + esc(DANE.heroCytat.fragment) + "”</blockquote>"
+      + "<figcaption>" + esc(zrodloCytatu.autor) + ", opinia w Google</figcaption>";
+  } else {
+    el("hero-cytat").remove();
+  }
+
+  /* pas z nazwami zabiegów — dwie identyczne grupy dają płynną pętlę */
+  const nazwyZabiegow = [];
+  DANE.specjalisci.forEach((sp) => sp.kategorie.forEach((k) => k.pozycje.forEach((poz) => {
+    if (nazwyZabiegow.indexOf(poz.nazwa) === -1) nazwyZabiegow.push(poz.nazwa);
+  })));
+  const grupaPasa = '<span class="pas__grupa">'
+    + nazwyZabiegow.map((n) => esc(n) + ' <span class="pas__gwiazdka">✻</span>').join(" ")
+    + "</span>";
+  el("pas").innerHTML = grupaPasa + grupaPasa;
+
+  /* ---------- kadry ---------- */
+  el("hero-kadr").innerHTML = kadr(DANE.kadry.hero, "kadr--pelny");
+
+  /* ---------- cennik ---------- */
+  /* Dane trzymamy per osoba, bo tak wygląda rzeczywistość: każda stylistka ma
+     własny cennik. Ale wyświetlamy je odwrotnie — kategoriami — więc najpierw
+     przekładamy jedno na drugie. Kolejność kategorii bierze się z tego, kto
+     pierwszy ją ma w DANE, dzięki czemu układem cennika sterujesz, przestawiając
+     kategorie w danych, a nie w tym kodzie. */
+  const kotwice = {};
+  const wgKategorii = [];
+
+  DANE.specjalisci.forEach(function (s) {
+    s.kategorie.forEach(function (k) {
+      let wpis = null;
+      for (let i = 0; i < wgKategorii.length; i++) {
+        if (wgKategorii[i].nazwa === k.nazwa) { wpis = wgKategorii[i]; break; }
+      }
+      if (!wpis) wgKategorii.push(wpis = { nazwa: k.nazwa, osoby: [] });
+      wpis.osoby.push({ imie: s.imie, pozycje: k.pozycje });
+    });
+  });
+
+  el("cennik").innerHTML = wgKategorii.map(function (kat, i) {
+    kotwice[kat.nazwa] = "kat-" + i;
+
+    /* Podpis z imieniem zostaje także wtedy, gdy kategorię prowadzi jedna osoba
+       — wtedy właśnie niesie najwięcej informacji, bo mówi, że drugiej u niej
+       nie zamówisz. */
+    const osoby = kat.osoby.map(function (o) {
+      const wiersze = o.pozycje.map(function (p) {
+        return '<div class="pozycja">'
+          + '<dt class="pozycja__nazwa">' + oznacz(p.nazwa) + "</dt>"
+          + '<dd class="pozycja__czas">' + (p.czas ? oznacz(p.czas) : "") + "</dd>"
+          + '<dd class="pozycja__cena">' + oznacz(p.cena) + "</dd>"
+          + (p.dopisek ? '<dd class="pozycja__dopisek">' + esc(p.dopisek) + "</dd>" : "")
+          + "</div>";
+      }).join("");
+
+      return '<div class="kategoria__osoba">'
+        + '<h4 class="kategoria__kto">' + oznacz(o.imie) + "</h4>"
+        + '<dl class="cennik">' + wiersze + "</dl>"
+        + "</div>";
+    }).join("");
+
+    return '<section class="kategoria" id="' + kotwice[kat.nazwa] + '">'
+      + '<h3 class="kategoria__nazwa">' + esc(kat.nazwa) + "</h3>"
+      + osoby + "</section>";
+  }).join("");
+
+  /* siatka kategorii: ile pozycji i od jakiej kwoty — liczone z cennika */
+  const podsumowanie = {};
+  DANE.specjalisci.forEach((sp) => sp.kategorie.forEach((k) => {
+    const wpis = podsumowanie[k.nazwa] || (podsumowanie[k.nazwa] = { ile: 0, min: Infinity });
+    k.pozycje.forEach((poz) => {
+      wpis.ile += 1;
+      if (String(poz.cena).trim().charAt(0) === "+") return;
+      const kwota = parseInt(String(poz.cena).replace(/[^0-9]/g, ""), 10);
+      if (!isNaN(kwota) && kwota < wpis.min) wpis.min = kwota;
+    });
+  }));
+
+  const odmiana = (n) => n === 1 ? "pozycja" : (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? "pozycje" : "pozycji");
+
+  el("kategorie").innerHTML = Object.keys(podsumowanie).map(function (nazwa) {
+    const w = podsumowanie[nazwa];
+    return '<a class="kategorie__karta" href="#' + esc(kotwice[nazwa]) + '">'
+      + '<span class="kategorie__nazwa">' + esc(nazwa) + "</span>"
+      + '<span class="kategorie__ile">' + w.ile + " " + odmiana(w.ile) + "</span>"
+      + (w.min < Infinity ? '<span class="kategorie__od">od ' + w.min + " zł</span>" : "")
+      + "</a>";
+  }).join("");
+
+  el("cennik-czasy").innerHTML = "Czas trwania zabiegów: " + oznacz(DANE.czasyNota);
+  el("cennik-nota").innerHTML = oznacz(DANE.zabiegiNota);
+  el("zabiegi-cta").innerHTML = przyciskCta("btn--glowny", DANE.cta.tekst) + kanalyCta();
+
+  /* ---------- o salonie ---------- */
+  el("kroki").innerHTML = DANE.pierwszaWizyta.map((k) =>
+    "<li><h3>" + esc(k.krok) + "</h3><p>" + oznacz(k.tresc) + "</p></li>"
+  ).join("");
+
+  /* Pusty akapit zostawiłby po sobie odstęp z `gap`, więc nie czyścimy treści,
+     tylko usuwamy sam element. */
+  if (DANE.oSalonie.cytat) el("o-cytat").innerHTML = oznacz(DANE.oSalonie.cytat);
+  else el("o-cytat").remove();
+  el("o-tekst").innerHTML = oznacz(DANE.oSalonie.tekst);
+  if (!brak(DANE.oSalonie.tekst)) el("o-tekst").classList.add("inicjal");
+  el("o-fakty").innerHTML = DANE.oSalonie.fakty.map((f) =>
+    "<div><dt>" + esc(f.nazwa) + "</dt><dd>" + oznacz(f.wartosc) + "</dd></div>"
+  ).join("");
+  /* Karta osoby: portret + biogram. Rysowana z tej samej tablicy `specjalisci`,
+     z której powstaje cennik — jedna osoba to jeden obiekt, nie dwa. */
+  el("zespol").innerHTML = DANE.specjalisci.map(function (s) {
+    /* Karta osoby świadomie nie linkuje do prywatnego Instagrama. Odsyłacze do
+       serwisów są jedne, wspólne dla salonu, i stoją przy rezerwacji — tam,
+       gdzie klientka ma coś do zrobienia. Profile osobiste zostają w JSON-LD
+       (`sameAs`), bo tam służą Google do powiązania osoby z profilem, a nie do
+       rozpraszania czytającej w połowie biogramu. */
+    const tekst = (s.bio || []).map((a) => "<p>" + esc(a) + "</p>").join("");
+
+    return '<article class="osoba">'
+      + kadr(s.portret, "kadr--portret osoba__foto")
+      + '<div class="osoba__tresc">'
+      + '<h3 class="osoba__imie">' + oznacz(s.imie) + "</h3>"
+      + '<p class="osoba__rola">' + oznacz(s.rola) + "</p>"
+      + tekst
+      + "</div></article>";
+  }).join("");
+
+  /* ---------- opinie ---------- */
+  /* Gwiazdki jako jeden obrazek dla czytnika ekranu — inaczej czyta pięć razy
+     „gwiazda". Same <svg> mają aria-hidden, etykieta jest na obiekcie. */
+  const gwiazdki = (ile, max) => {
+    if (typeof ile !== "number") return "";
+    let s = "";
+    for (let i = 0; i < ile; i++) s += svg("gwiazda", 14);
+    return '<span class="ocena" role="img" aria-label="Ocena ' + ile + " na " + max + '">' + s + "</span>";
+  };
+
+  el("opinie-lista").innerHTML = DANE.opinie.map((o) =>
+    '<blockquote class="opinia">'
+    + gwiazdki(o.ocena, DANE.opinieMax)
+    + '<p class="opinia__tresc">' + esc(o.tresc) + "</p>"
+    + '<footer class="opinia__stopka">'
+    + '<span class="opinia__autor">' + esc(o.autor) + "</span> · " + esc(o.kiedy) + " "
+    + '<span class="opinia__zrodlo">' + svg("gwiazda", 12) + esc(DANE.opinieZrodlo) + "</span>"
+    + "</footer>"
+    + "</blockquote>"
+  ).join("");
+
+  el("opinie-zrodlo").innerHTML =
+    '<a class="btn btn--drugi" href="' + esc(DANE.linki.opinieGoogle) + '" target="_blank" rel="noopener">'
+    + svg("gwiazda", 16) + "Wszystkie opinie w Google</a>";
+
+  /* ---------- efekty ---------- */
+  el("efekty-nota").innerHTML = oznacz(DANE.efektyNota);
+  el("efekty-lista").innerHTML = DANE.kadry.efekty
+    .map((g) => kadr(g, "", "aspect-ratio:" + g.prop)).join("");
+
+  /* ---------- galeria ---------- */
+  el("galeria").innerHTML = DANE.kadry.galeria
+    .map((g) => kadr(g, "", "aspect-ratio:" + g.prop)).join("");
+
+  /* ---------- kontakt ---------- */
+  const adresPelny = DANE.adres.ulica + ", " + DANE.adres.kod + " " + DANE.adres.miasto;
+
+  el("dane").innerHTML =
+    '<a href="' + esc(DANE.telefon.href) + '">' + svg("telefon", 20) + "<span>" + esc(DANE.telefon.wyswietlany) + "</span></a>"
+    + "<p>" + svg("pin", 20) + "<span>" + oznacz(adresPelny) + "</span></p>"
+    + '<a href="' + esc(DANE.linki.mapa) + '" target="_blank" rel="noopener">' + svg("mapa", 20) + "<span>Zobacz wizytówkę Google</span></a>"
+    /* Serwisy społecznościowe dopiero pod telefonem i adresem. To też są kanały
+       rezerwacji, ale wolniejsze — odpowiedź przychodzi wtedy, gdy ktoś zajrzy
+       do wiadomości, a nie od razu. Kolejność ma to odzwierciedlać. */
+    + link(DANE.linki.instagram, "instagram", DANE.linki.instagramNazwa)
+    + link(DANE.linki.facebook,  "facebook",  DANE.linki.facebookNazwa);
+
+  el("kontakt-cta").innerHTML = przyciskCta("btn--glowny", DANE.cta.tekst) + kanalyCta();
+
+  el("finisz-cta").innerHTML =
+    przyciskCta("btn--glowny", DANE.cta.tekst)
+    + '<a class="btn btn--drugi" href="' + esc(DANE.telefon.href) + '">'
+    + esc(DANE.telefon.wyswietlany) + "</a>"
+    + kanalyCta();
+
+  /* ---------- godziny + wyróżnienie dnia bieżącego ---------- */
+  const dzisDow = new Date().getDay();
+  el("godziny").innerHTML = DANE.godziny.map((g) => {
+    const dzis = g.dow === dzisDow;
+    return '<div class="godziny__rzad' + (dzis ? " godziny__rzad--dzis" : "") + '">'
+      + "<dt>" + esc(g.dzien) + (dzis ? '<span class="godziny__dzis">Dziś</span>' : "") + "</dt>"
+      + "<dd>" + (g.zamkniete ? "zamknięte" : g.od + "–" + g.do) + "</dd>"
+      + "</div>";
+  }).join("");
+
+  /* ---------- mapa: wczytanie po kliknięciu ---------- */
+  const ramka = el("mapa-ramka");
+  el("mapa-info").textContent = DANE.mapaInfo;
+
+  /* Zamiast statycznego zrzutu mapy — kafelek z adresem. Zrzut z Google Maps
+     jest niedozwolony na własnej stronie, a obrazek z innego źródła to kolejny
+     plik do pobrania po to, żeby po kliknięciu i tak go zastąpić. Adres niesie
+     tu więcej informacji niż podgląd mapy w tej wielkości. */
+  function mapaPlaceholder() {
+    const bezAdresu = brak(DANE.linki.mapaEmbed);
+    ramka.innerHTML =
+      '<div class="dojazd">'
+      + svg("pin", 30)
+      /* Adres składany z części, a nie z gotowego `adresPelny`: przeglądarka
+         łamie wiersz po dywizie i rozrywała kod pocztowy na „34-” i „650”. */
+      + '<p class="dojazd__adres">' + oznacz(DANE.adres.ulica) + "<br>"
+      + '<span class="dojazd__miasto">' + oznacz(DANE.adres.kod) + " " + oznacz(DANE.adres.miasto)
+      + "</span></p>"
+      + '<button class="btn btn--glowny" type="button" id="mapa-btn"'
+      + (bezAdresu ? " disabled" : "") + ">"
+      + svg("mapa", 16) + "Pokaż mapę</button>"
+      /* Bez adresu iframe przycisk nie ma czego wczytać — mówimy o tym wprost
+         zamiast wyrzucać okienko alert(), które blokuje całą stronę. */
+      + (bezAdresu ? '<p class="dojazd__brak">' + oznacz(DANE.linki.mapaEmbed) + "</p>" : "")
+      + "</div>";
+
+    if (bezAdresu) return;
+    el("mapa-btn").addEventListener("click", function () {
+      ramka.innerHTML = '<iframe src="' + esc(DANE.linki.mapaEmbed) + '" title="Mapa dojazdu do salonu '
+        + esc(DANE.firma.nazwa) + '" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>';
+    });
+  }
+  mapaPlaceholder();
+
+  /* ---------- stopka ---------- */
+  el("stopka").innerHTML =
+    "<div>"
+    /* Znak firmowy zastępuje tu napis z nazwą — nazwa zostaje w atrybucie alt,
+       więc wyszukiwarka i czytnik ekranu nadal ją mają. */
+    + '<img class="stopka__znak" src="' + esc(DANE.logo.plik) + '"'
+    + ' width="' + DANE.logo.szer + '" height="' + DANE.logo.wys + '"'
+    + ' alt="' + esc(DANE.logo.alt) + '" loading="lazy" decoding="async">'
+    + "<p>" + oznacz(adresPelny) + "</p>"
+    + '<p><a href="' + esc(DANE.telefon.href) + '">' + esc(DANE.telefon.wyswietlany) + "</a></p>"
+    + "<p>NIP: " + oznacz(DANE.firma.nip) + "</p>"
+    + "</div>"
+    + "<div>"
+    + "<p>Śr–Pt 7:00–17:00 · Sob–Nd 7:00–15:00 · Pn–Wt zamknięte</p>"
+    + '<p>Instagram: <a href="' + esc(DANE.linki.instagram) + '" target="_blank" rel="noopener">'
+      + esc(DANE.linki.instagramNazwa) + "</a></p>"
+    + '<p>Facebook: <a href="' + esc(DANE.linki.facebook) + '" target="_blank" rel="noopener">'
+      + esc(DANE.linki.facebookNazwa) + "</a></p>"
+    + "<p>E-mail: " + oznacz(DANE.linki.email) + "</p>"
+    /* Odsyłacz do polityki prywatności musi być na każdej podstronie i łatwy
+       do znalezienia — stopka to miejsce, w którym ludzie go szukają. */
+    + '<p><a href="dokumenty/polityka-prywatnosci.html">Polityka prywatności</a></p>'
+    + "<p>© " + new Date().getFullYear() + " " + esc(DANE.firma.nazwa) + "</p>"
+    + "</div>";
+
+  /* ---------- sticky pasek mobilny ---------- */
+  el("pasek").innerHTML =
+    przyciskCta("btn--glowny", DANE.cta.tekst)
+    + '<a class="btn btn--drugi" href="' + esc(DANE.linki.mapa) + '" target="_blank" rel="noopener">Dojazd</a>'
+    + kanalyIkony();
+
+  /* ---------- zwijanie nagłówka ---------- */
+  /* Duży znak firmowy zabiera na telefonie sporo ekranu, a potrzebny jest
+     tylko na starcie. Po przewinięciu poza hero nagłówek się spłaszcza. */
+  const naglowek = document.querySelector(".naglowek");
+  const przelaczNaglowek = () => {
+    naglowek.setAttribute("data-zwiniety", window.scrollY > 80 ? "true" : "false");
+  };
+  addEventListener("scroll", przelaczNaglowek, { passive: true });
+  przelaczNaglowek();
+
+  /* ---------- menu mobilne ---------- */
+  const btn = el("menu-btn");
+  const nav = el("nawigacja");
+  const zamknijBtn = el("menu-zamknij");
+  const FOKUS = 'a[href], button:not([disabled])';
+  let poprzedniFokus = null;
+
+  const otwarte = () => nav.getAttribute("data-otwarte") === "true";
+
+  function otworz() {
+    poprzedniFokus = document.activeElement;
+    nav.setAttribute("data-otwarte", "true");
+    btn.setAttribute("aria-expanded", "true");
+    document.body.classList.add("menu-otwarte");
+    const pierwszy = nav.querySelector(FOKUS);
+    if (pierwszy) pierwszy.focus();
+  }
+
+  function zamknij() {
+    nav.removeAttribute("data-otwarte");
+    btn.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("menu-otwarte");
+    if (poprzedniFokus) poprzedniFokus.focus();
+  }
+
+  btn.addEventListener("click", otworz);
+  zamknijBtn.addEventListener("click", zamknij);
+  nav.addEventListener("click", (e) => { if (e.target.closest("a") && otwarte()) zamknij(); });
+
+  document.addEventListener("keydown", function (e) {
+    if (!otwarte()) return;
+    if (e.key === "Escape") { e.preventDefault(); zamknij(); return; }
+    if (e.key !== "Tab") return;
+
+    const lista = Array.prototype.filter.call(nav.querySelectorAll(FOKUS), (n) => n.offsetParent !== null);
+    if (!lista.length) return;
+    const pierwszy = lista[0];
+    const ostatni = lista[lista.length - 1];
+
+    if (e.shiftKey && document.activeElement === pierwszy) { e.preventDefault(); ostatni.focus(); }
+    else if (!e.shiftKey && document.activeElement === ostatni) { e.preventDefault(); pierwszy.focus(); }
+  });
+
+  window.addEventListener("resize", function () {
+    if (!window.matchMedia("(max-width: 767.98px)").matches && otwarte()) zamknij();
+  });
+
+  /* ---------- JSON-LD z DANE, bez pól niewypełnionych ---------- */
+  function czysc(o) {
+    if (Array.isArray(o)) {
+      const t = o.map(czysc).filter((v) => v !== undefined);
+      return t.length ? t : undefined;
+    }
+    if (o && typeof o === "object") {
+      const w = {};
+      Object.keys(o).forEach((k) => { const v = czysc(o[k]); if (v !== undefined) w[k] = v; });
+      return Object.keys(w).length > 1 ? w : undefined;
+    }
+    return brak(o) ? undefined : o;
+  }
+
+  const tag = document.createElement("script");
+  tag.type = "application/ld+json";
+  tag.textContent = JSON.stringify(czysc({
+    "@context": "https://schema.org",
+    "@type": DANE.seo.schemaTyp,
+    name: DANE.firma.nazwa,
+    description: "Salon kosmetyczny w Tymbarku. Makijaż ślubny i wieczorowy, stylizacja brwi i rzęs, szkolenia makijażowe.",
+    url: DANE.firma.url,
+    image: DANE.seo.obraz,
+    logo: DANE.seo.znak,
+    telephone: DANE.telefon.href.replace("tel:", ""),
+    priceRange: DANE.seo.priceRange,
+    hasMap: DANE.linki.mapa,
+    /* Profile w serwisach — dla Google to potwierdzenie, że wizytówka, strona
+       i konta społecznościowe opisują tę samą firmę. Filtr, bo tablica z
+       [UZUPEŁNIĆ] w środku przeszłaby przez czysc() i trafiła do wyniku. */
+    sameAs: [DANE.linki.instagram, DANE.linki.facebook].filter((a) => !brak(a)),
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: DANE.adres.ulica,
+      addressLocality: DANE.adres.miasto,
+      postalCode: DANE.adres.kod,
+      addressCountry: DANE.adres.kraj
+    },
+    geo: { "@type": "GeoCoordinates", latitude: DANE.geo.lat, longitude: DANE.geo.lng },
+    openingHoursSpecification: DANE.godziny.filter((g) => !g.zamkniete).map((g) => ({
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "https://schema.org/" + g.schema,
+      opens: g.od,
+      closes: g.do
+    })),
+    areaServed: { "@type": "Place", name: "Tymbark, powiat limanowski" },
+    foundingDate: "2019",
+    employee: DANE.specjalisci.map((s) => ({
+      "@type": "Person",
+      name: s.imie,
+      jobTitle: s.rola,
+      sameAs: s.instagram
+    })),
+    /* Ocena zbiorcza znika z JSON-LD, dopóki nie wpiszesz prawdziwych liczb
+       z wizytówki — czysc() wycina każde pole z [UZUPEŁNIĆ]. Zmyślona ocena
+       zbiorcza to powód do ręcznej kary od Google, nie tylko utrata gwiazdek. */
+    aggregateRating: (brak(DANE.opinieSrednia) || brak(DANE.opinieOgolem)) ? undefined : {
+      "@type": "AggregateRating",
+      ratingValue: DANE.opinieSrednia,
+      reviewCount: DANE.opinieOgolem,
+      bestRating: DANE.opinieMax
+    },
+    /* Opinii tu nie ma celowo. Google od 2019 nie pokazuje gwiazdek dla opinii,
+       które firma sama publikuje o sobie (LocalBusiness i Organization), więc
+       ten blok nic nie dawał w wynikach, a powielał cudze wypowiedzi w kodzie.
+       Same opinie zostają widoczne na stronie, w sekcji „Opinie”. */
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Cennik",
+      itemListElement: DANE.specjalisci.reduce(function (lista, s) {
+        s.kategorie.forEach(function (k) {
+          k.pozycje.forEach(function (p) {
+            /* dopłaty ("+20 zł") to nie samodzielna usługa — pomijamy */
+            if (String(p.cena).trim().charAt(0) === "+") return;
+            const kwota = String(p.cena).replace(/[^0-9]/g, "");
+            if (!kwota) return;
+            lista.push({
+              "@type": "Offer",
+              itemOffered: { "@type": "Service", name: p.nazwa, category: k.nazwa },
+              price: kwota,
+              priceCurrency: "PLN"
+            });
+          });
+        });
+        return lista;
+      }, [])
+    }
+  }));
+  document.head.appendChild(tag);
+})();
+</script>
+
+</body>
+</html>
